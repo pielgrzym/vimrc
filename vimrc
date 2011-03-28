@@ -12,8 +12,7 @@
 set nocompatible "Turns off vi compatibility - adds cool functionality
 
 "Pathogen
-"call pathogen#helptags()
-"call pathogen#runtime_append_all_bundles()
+call pathogen#runtime_append_all_bundles()
 "Eof Pathogen
 
 set t_Co=256
@@ -107,6 +106,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 let mapleader = ","
 
 "Map taglist window opening
+nnoremap <F5> :GundoToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> ,t :TlistToggle<CR>
 nnoremap <silent> ,f :FufBuffer<CR>
