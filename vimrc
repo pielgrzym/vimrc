@@ -135,6 +135,7 @@ autocmd FileType python IndentGuidesEnable " auto enable for python
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_underbar_completion = 1 " c_p -> compeltion -> current_page
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEMPLATES
