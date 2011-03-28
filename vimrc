@@ -106,6 +106,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 let mapleader = ","
 
 "Map taglist window opening
+nnoremap <F5> :GundoToggle<CR>
 nnoremap <silent> <F8> :TlistToggle<CR>
 nnoremap <silent> ,t :TlistToggle<CR>
 nnoremap <silent> ,f :FufBuffer<CR>
