@@ -113,6 +113,14 @@ nnoremap <silent> ,f :FufBuffer<CR>
 nnoremap <silent> ,o :FufFile<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent guides
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=236
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
+autocmd FileType python IndentGuidesEnable " auto enable for python
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOCOMPLCACHE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neocomplcache_enable_at_startup = 1
