@@ -4,7 +4,7 @@ snippet #!
 snippet #c
 	# -*- coding: utf-8 -*-
 
-snippet imp
+snippet im
 	import ${1:module}
 
 snippet fr
@@ -40,15 +40,13 @@ snippet cl
 # New Function
 snippet def
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
-		"""${3:docstring for $1}"""
+		"""
+		${3:docstring for $1}
+		"""
 		${4:pass}
 snippet deff
 	def ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
 		${3}
-# New Method
-snippet defs
-	def ${1:mname}(self, ${2:arg}):
-		${3:pass}
 # New Property
 snippet property
 	def ${1:foo}():
@@ -59,7 +57,7 @@ snippet property
 			${4:self._$1 = value}
 # Lambda
 snippet ld
-	${1:var} = lambda ${2:vars} : ${3:action}
+	lambda ${1:vars} : ${2:action}
 snippet .
 	self.
 snippet try Try/Except
