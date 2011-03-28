@@ -13,3 +13,6 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = git@github.com:pielgrzym/vim-sparkup.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git
