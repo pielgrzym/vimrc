@@ -57,7 +57,7 @@ set wildmenu "Turn on WiLd menu
 set wildignore=*.pyc
 set shortmess=atI "Remove greeting msg and 'press a key' msgs
 set laststatus=2 "Statusline always visible
-set statusline=%-F%-m%-r%-h%-w\ [%Y]\ [LINIA:\ %l/%L\]\ [%p%%] "Better statusline format
+set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [%p%%] "Better statusline format
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI
