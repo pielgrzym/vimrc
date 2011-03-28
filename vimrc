@@ -121,7 +121,9 @@ nnoremap <silent> ,o :FufFile<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent guides
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:indent_guides_auto_colors = 0
+if !has('gui_running')
+        let g:indent_guides_auto_colors = 0
+endif
 let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
