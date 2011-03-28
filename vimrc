@@ -60,6 +60,12 @@ set laststatus=2 "Statusline always visible
 set statusline=%-F%-m%-r%-h%-w\ [%Y]\ [LINIA:\ %l/%L\]\ [%p%%] "Better statusline format
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" GUI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+set guioptions=
+set guifont=Terminus\ 10
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT FORMATIING / TEXT LAYOUT
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
