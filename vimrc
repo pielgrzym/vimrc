@@ -116,6 +116,7 @@ nnoremap <silent> ,o :FufFile<CR>
 " Indent guides
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=236
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
 autocmd FileType python IndentGuidesEnable " auto enable for python
