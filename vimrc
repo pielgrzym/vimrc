@@ -22,7 +22,7 @@ set fencs=utf-8,iso-8859-2,cp1250 "Resolve encoding problems
 set autoread "Set to auto read when a file is changed from the outside
 set hidden "Enables changing buffer without saving
 set history=2000 "Sets how many lines of history VIM has to remember
-set ssop=blank,buffers,curdir,folds,help,options,winpos,winsize "Session options
+set ssop=blank,buffers,curdir,folds,winpos,winsize "Session options
 set viminfo='50,<1000,s100,n~/.viminfo "Remember marks, registers (up to 100kb)
 set ignorecase " case insensitive search
 set smartcase " make searches case-insensitive, unless they contain upper-case letters:
@@ -39,15 +39,6 @@ set backup "Enable creation of backup files
 set backupdir=~/.vbk "Place backup files in a hidden dir
 set directory=~/.vbk "Place swap files in a hidden dir
 
-"Script to autocreate hidden dir for each directory
-"by Heptite from #vim on freenode.org
-"autocmd BufRead,BufNewFile * call s:CreateBackupdir(expand('<afile>:p:h'), '.vbk')
-"function s:CreateBackupdir(file, directory)
-	"if ! isdirectory(a:file . '/' . a:directory)
-		"call mkdir(a:file . '/' . a:directory)
-	"endif
-"endfunction
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " USER INTERFACE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -62,6 +53,7 @@ set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+"get rid of gvim toolbars and stuff
 set guioptions=
 set guifont=Terminus\ 10
 
@@ -70,8 +62,6 @@ set guifont=Terminus\ 10
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set expandtab "Use spaces to create tabs
-"set tabstop=2 "Tabstop according to drupal programming guidelines
-"set shiftwidth=2 "Shiftwidth according to drupal programming guidelines
 set ai "Auto indent
 set si "Smart indet
 
@@ -111,10 +101,23 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = ","
 
-"Map taglist window opening
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Gundo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F5> :GundoToggle<CR>
-nnoremap <silent> <F8> :TlistToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Taglist-plus
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> ,t :TlistToggle<CR>
+let g:Tlist_GainFocus_On_ToggleOpen = 1
+let g:Tlist_Close_On_Select = 1
+let g:Tlist_Compact_Format = 1
+let g:Tlist_File_Fold_Auto_Close = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fuzzy finder
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> ,f :FufBuffer<CR>
 nnoremap <silent> ,o :FufFile<CR>
 
