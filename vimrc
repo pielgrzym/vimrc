@@ -137,6 +137,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1 " c_p -> compeltion -> current_page
 inoremap <expr><C-x> neocomplcache#smart_close_popup()."\<C-x>"
+inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEMPLATES
