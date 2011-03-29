@@ -28,3 +28,6 @@
 [submodule "bundle/python_syntax"]
 	path = bundle/python_syntax
 	url = https://github.com/olivierverdier/python-syntax.vim.git
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/mhz/vim-matchit.git
