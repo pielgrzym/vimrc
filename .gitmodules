@@ -22,3 +22,6 @@
 [submodule "bundle/vim_repeat"]
 	path = bundle/vim_repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/neocomplcache"]
+	path = bundle/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
