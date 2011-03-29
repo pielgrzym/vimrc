@@ -109,7 +109,7 @@ nnoremap <F5> :GundoToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Taglist-plus
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> ,t :TlistToggle<CR>
+nnoremap <silent> <Leader>t :TlistToggle<CR>
 let g:Tlist_GainFocus_On_ToggleOpen = 1
 let g:Tlist_Close_On_Select = 1
 let g:Tlist_Compact_Format = 1
@@ -118,8 +118,8 @@ let g:Tlist_File_Fold_Auto_Close = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Fuzzy finder
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> ,f :FufBuffer<CR>
-nnoremap <silent> ,o :FufFile<CR>
+nnoremap <silent> <Leader>f :FufBuffer<CR>
+nnoremap <silent> <Leader>o :FufFile<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent guides
