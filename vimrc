@@ -102,12 +102,12 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 let mapleader = ","
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Gundo
+" GUNDO
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F5> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Taglist-plus
+" TAGLIST-PLUS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>t :TlistToggle<CR>
 let g:Tlist_GainFocus_On_ToggleOpen = 1
@@ -116,13 +116,13 @@ let g:Tlist_Compact_Format = 1
 let g:Tlist_File_Fold_Auto_Close = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Fuzzy finder
+" FUZZY FINDER
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>f :FufBuffer<CR>
 nnoremap <silent> <Leader>o :FufFile<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Indent guides
+" INDENT GUIDES
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 if !has('gui_running')
         let g:indent_guides_auto_colors = 0
@@ -143,13 +143,21 @@ inoremap <expr><C-x> neocomplcache#smart_close_popup()."\<C-x>"
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" TEMPLATES
+" VIMOUTLINER
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
-
 let otl_map_tabs = 1
-autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType otl set noexpandtab
 autocmd FileType otl set tabstop=4
 autocmd FileType otl set shiftwidth=4
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SNIPMATE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType html set ft=htmldjango.html " For SnipMate
+autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TEMPLATES
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
