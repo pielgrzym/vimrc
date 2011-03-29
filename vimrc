@@ -109,7 +109,7 @@ nnoremap <F5> :GundoToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TAGLIST-PLUS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>t :TagbarOpenAutoClose<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TAGLIST-PLUS
@@ -158,7 +158,7 @@ autocmd FileType otl set shiftwidth=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SNIPMATE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python set ft=python.django " For SnipMate
+"autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
