@@ -109,11 +109,16 @@ nnoremap <F5> :GundoToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TAGLIST-PLUS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <Leader>t :TlistToggle<CR>
-let g:Tlist_GainFocus_On_ToggleOpen = 1
-let g:Tlist_Close_On_Select = 1
-let g:Tlist_Compact_Format = 1
-let g:Tlist_File_Fold_Auto_Close = 1
+nnoremap <silent> <Leader>t :TagbarOpenAutoClose<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TAGLIST-PLUS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"nnoremap <silent> <Leader>t :TlistToggle<CR>
+"let g:Tlist_GainFocus_On_ToggleOpen = 1
+"let g:Tlist_Close_On_Select = 1
+"let g:Tlist_Compact_Format = 1
+"let g:Tlist_File_Fold_Auto_Close = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUZZY FINDER
@@ -153,7 +158,7 @@ autocmd FileType otl set shiftwidth=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SNIPMATE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python set ft=python.django " For SnipMate
+"autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
