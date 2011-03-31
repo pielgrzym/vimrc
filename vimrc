@@ -107,9 +107,11 @@ let mapleader = ","
 nnoremap <F5> :GundoToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" TAGLIST-PLUS
+" TAGBAR
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>t :TagbarOpenAutoClose<CR>
+let g:tagbar_left = 1
+let g:tagbar_compact = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " TAGLIST-PLUS
