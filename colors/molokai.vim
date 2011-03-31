@@ -119,6 +119,7 @@ hi pythonSpaceError guifg=#BCBCBC guibg=#3B3A32
 hi pythonDecorator guifg=#66D9EF  gui=bold
 hi pythonDottedName guifg=#66D9EF  gui=bold
 hi pythonComment guifg=#75715E
+hi pythonTripleString          guifg=#E6DB74
        
 hi pythonException guifg=#AE81FF gui=bold   
 hi pythonConditional guifg=#F92672 gui=bold   
@@ -231,4 +232,5 @@ if &t_Co > 255
    hi CursorColumn                ctermbg=234
    hi LineNr          ctermfg=250 ctermbg=234
    hi NonText         ctermfg=250 ctermbg=234
+   hi pythonTripleString          ctermfg=144
 end
