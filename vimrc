@@ -32,6 +32,13 @@ set pastetoggle=<F12>
 filetype plugin on "Enable filetype plugin
 filetype indent on "Enable indenting plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" NOWRAP GOODIES
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nowrap
+set sidescroll=5 "when moving in the file horizontally move 5 columns a time
+set listchars+=precedes:<,extends:> " nice indicators that there is more text horizontally
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BACKUP OPTIONS AND BACKUP DIR SCRIPT
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -100,6 +107,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = ","
+
+nmap <silent> <Leader>w :set nowrap!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUNDO
