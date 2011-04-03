@@ -136,6 +136,11 @@ let g:tagbar_compact = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>f :FufBuffer<CR>
 nnoremap <silent> <Leader>o :FufFile<CR>
+nnoremap <silent> <Leader>,o :FufCoverageFile<CR>
+nnoremap <silent> <Leader>b :FufBookmarkFile<CR>
+nnoremap <silent> <Leader>a :FufBookmarkFileAdd<CR>
+nnoremap <silent> <Leader>l :FufLine<CR>
+noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " INDENT GUIDES
