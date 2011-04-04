@@ -10,9 +10,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/indent_guides"]
-	path = bundle/indent_guides
-	url = git://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
