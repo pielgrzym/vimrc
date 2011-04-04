@@ -140,19 +140,8 @@ nnoremap <silent> <Leader>,o :FufCoverageFile<CR>
 nnoremap <silent> <Leader>b :FufBookmarkFile<CR>
 nnoremap <silent> <Leader>a :FufBookmarkFileAdd<CR>
 nnoremap <silent> <Leader>l :FufLine<CR>
+nnoremap <silent> <Leader>v :FufTag<CR>
 noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-" INDENT GUIDES
-"""""""""""""""""""""""""""""""""""""""""""""""""""""
-if !has('gui_running')
-        let g:indent_guides_auto_colors = 0
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd ctermbg=236
-        autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=237
-endif
-let g:indent_guides_guide_size = 1
-let g:indent_guides_start_level = 2
-autocmd FileType python IndentGuidesEnable " auto enable for python
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOCOMPLCACHE
