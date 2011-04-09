@@ -164,7 +164,7 @@ autocmd FileType otl set shiftwidth=4
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SNIPMATE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd FileType python set ft=python.django " For SnipMate
+autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
