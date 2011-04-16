@@ -37,7 +37,7 @@ filetype indent on "Enable indenting plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 set nowrap
 set sidescroll=5 "when moving in the file horizontally move 5 columns a time
-set listchars+=precedes:<,extends:> " nice indicators that there is more text horizontally
+set listchars+=precedes:←,extends:→ " nice indicators that there is more text horizontally
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " BACKUP OPTIONS AND BACKUP DIR SCRIPT
