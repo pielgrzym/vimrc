@@ -15,8 +15,31 @@ set nocompatible "Turns off vi compatibility - adds cool functionality
 call pathogen#runtime_append_all_bundles()
 "Eof Pathogen
 
-set t_Co=256
-color molokai
+"set t_Co=256
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SOLARIZED SETTINGS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! SolLight()
+        set background=light
+        colorscheme solarized
+endfunction
+
+function! SolDark()
+        set background=dark
+        colorscheme solarized
+endfunction
+
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors = 256
+if has('gui_running')
+        call togglebg#map("<F1>")
+else
+        noremap <F1> :call SolLight()<CR>
+        noremap <F2> :call SolDark()<CR>
+endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let python_highlight_all = 1
 set fencs=utf-8,iso-8859-2,cp1250 "Resolve encoding problems
 set autoread "Set to auto read when a file is changed from the outside
