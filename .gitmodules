@@ -40,3 +40,6 @@
 [submodule "bundle/gitv"]
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
