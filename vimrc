@@ -192,6 +192,11 @@ autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" ROPE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let ropevim_goto_def_newwin=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEMPLATES
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
