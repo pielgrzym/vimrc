@@ -15,7 +15,7 @@ set nocompatible "Turns off vi compatibility - adds cool functionality
 call pathogen#runtime_append_all_bundles()
 "Eof Pathogen
 
-"set t_Co=256
+set t_Co=256 " without this line tmux/screen will do *bad* things to colors, dude
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 " SOLARIZED SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
