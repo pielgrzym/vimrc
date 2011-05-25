@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/pielgrzym/proj/gitolite-admin/conf'
-let g:netrw_dirhist_2='/home/pielgrzym/download/imvirt-0.9.0/perl/lib/ImVirt'
-let g:netrw_dirhist_3='/home/pielgrzym/download/imvirt-0.9.0/perl/lib/ImVirt/VMD'
-let g:netrw_dirhist_4='/home/pielgrzym'
-let g:netrw_dirhist_5='/home/pielgrzym/.neocon'
-let g:netrw_dirhist_6='/home/pielgrzym/proj/django/elearning/git/elearning/management/commands'
