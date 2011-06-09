@@ -14,7 +14,7 @@ Starring
 *       ropevim
 *       snipmate
 *       solarized
-*       sparkup
+*       zencoding (instead of sparkup)
 *       surround
 *       tagbar
 *       vim_fugitive
