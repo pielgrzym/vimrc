@@ -170,7 +170,15 @@ imap <C-k> <Plug>(neocomplcache_snippets_expand)
 smap <C-k> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-g> neocomplcache#undo_completion()
 inoremap <expr><C-l> neocomplcache#complete_common_string()
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n><CR>" : "\<TAB>"
+" below - tab-expand snippets:
 imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+
+"let g:neocomplcache_dictionary_filetype_lists = {
+    "\ 'default' : '',
+    "\ 'python' : $HOME.'/.python_completions',
+    "\ 'javascript' : $HOME.'/.javascript_completions'
+    "\ } 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIMOUTLINER
@@ -184,7 +192,7 @@ autocmd FileType otl set shiftwidth=4
 " SNIPMATE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType python set nosmartindent " For SnipMate
+autocmd FileType python set nosmartindent " prevents from screwing comment indent
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 
