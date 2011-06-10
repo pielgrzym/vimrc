@@ -49,9 +49,6 @@
 [submodule "bundle/web-indent"]
 	path = bundle/web-indent
 	url = https://github.com/garbas/vim-web-indent.git
-[submodule "bundle/snipmate-garbas"]
-	path = bundle/snipmate-garbas
-	url = https://github.com/pielgrzym/vim-snipmate.git
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
