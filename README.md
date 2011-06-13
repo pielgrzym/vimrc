@@ -5,19 +5,20 @@ Starring
 --------
 
 *       fuzzyfinder
-*       gitv
+*       neocomplcache
 *       gundo
 *       matchit
-*       neocomplcache
-*       nerdcommenter
+*       tcomment (instead of NERDcommenter)
 *       pyflakes
 *       ropevim
 *       snipmate
 *       solarized
 *       zencoding (instead of sparkup)
 *       surround
-*       tagbar
+*       tagbar (instead of taglist)
 *       vim_fugitive
+*       gitv
+*       gist
 *       vim_repeat
 
 See it yourself
