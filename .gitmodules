@@ -57,4 +57,4 @@
 	url = https://github.com/tomtom/tcomment_vim.git
 [submodule "bundle/gist"]
 	path = bundle/gist
-	url = https://github.com/vim-scripts/Gist.vim.git
+	url = https://github.com/mattn/gist-vim.git
