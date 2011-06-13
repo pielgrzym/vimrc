@@ -192,6 +192,14 @@ map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" GIST
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_browser_command = 'firefox %URL%'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEMPLATES
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
