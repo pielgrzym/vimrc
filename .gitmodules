@@ -54,4 +54,4 @@
 	url = https://github.com/garbas/vim-web-indent.git
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
-	url = https://github.com/Townk/vim-autoclose.git
+	url = https://github.com/blueyed/vim-autoclose.git
