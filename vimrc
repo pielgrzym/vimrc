@@ -70,6 +70,8 @@ set listchars+=precedes:←,extends:→ " nice indicators that there is more tex
 set backup "Enable creation of backup files
 set backupdir=~/.vbk "Place backup files in a hidden dir
 set directory=~/.vbk "Place swap files in a hidden dir
+set undofile "persisent undo! new in vim 7.3!
+set undodir=~/.vimundo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " USER INTERFACE
