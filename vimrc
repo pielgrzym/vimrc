@@ -46,7 +46,7 @@ set fencs=utf-8,iso-8859-2,cp1250 "Resolve encoding problems
 set autoread "Set to auto read when a file is changed from the outside
 set hidden "Enables changing buffer without saving
 set history=2000 "Sets how many lines of history VIM has to remember
-set ssop=blank,buffers,curdir,folds,localoptions,tabpages,winpos,winsize "Session options
+set ssop=blank,buffers,sesdir,folds,localoptions,tabpages,winpos,winsize "Session options
 set viminfo='50,<1000,s100,n~/.viminfo "Remember marks, registers (up to 100kb)
 set ignorecase " case insensitive search
 set smartcase " make searches case-insensitive, unless they contain upper-case letters:
