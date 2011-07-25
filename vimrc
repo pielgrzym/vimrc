@@ -205,3 +205,9 @@ let g:gist_browser_command = 'firefox %URL%'
 " TEMPLATES
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JAVA
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType java set noexpandtab
+autocmd FileType java set tabstop=4
+autocmd FileType java set shiftwidth=4
