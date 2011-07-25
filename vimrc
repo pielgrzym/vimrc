@@ -211,3 +211,6 @@ autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 autocmd FileType java set noexpandtab
 autocmd FileType java set tabstop=4
 autocmd FileType java set shiftwidth=4
+autocmd FileType java set makeprg=ant\ clean\ install\ -emacs
+autocmd FileType java set efm=\ %#[javac]\ %#%f:%l:%c:%*\\d:%*\\d:\ %t%[%^:]%#:%m,\%A\ %#[javac]\ %f:%l:\ %m,%-Z\ %#[javac]\ %p^,%-C%.%#
+autocmd FileType java map <F9> :make<CR>
