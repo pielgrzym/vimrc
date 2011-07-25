@@ -213,3 +213,6 @@ autocmd FileType java set tabstop=4
 autocmd FileType java set shiftwidth=4
 autocmd FileType java set makeprg=ant\ clean\ install\ -emacs
 autocmd FileType java map <F9> :make<CR>
+autocmd FileType java map <F10> :cp<CR>
+autocmd FileType java map <F11> :cn<CR>
+autocmd FileType java set cinoptions+=jl
