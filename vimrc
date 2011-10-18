@@ -155,8 +155,8 @@ let g:tagbar_compact = 1
 nnoremap <silent> <Leader>f :FufBuffer<CR>
 nnoremap <silent> <Leader>o :FufFile<CR>
 nnoremap <silent> <Leader>,o :FufCoverageFile<CR>
-nnoremap <silent> <Leader>b :FufBookmarkFile<CR>
-nnoremap <silent> <Leader>a :FufBookmarkFileAdd<CR>
+"nnoremap <silent> <Leader>b :FufBookmarkFile<CR>
+"nnoremap <silent> <Leader>a :FufBookmarkFileAdd<CR>
 nnoremap <silent> <Leader>l :FufLine<CR>
 nnoremap <silent> <Leader>v :FufTag<CR>
 noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
@@ -189,9 +189,16 @@ autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " ROPE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let ropevim_goto_def_newwin=1
-map <leader>j :RopeGotoDefinition<CR>
+" let ropevim_goto_def_newwin=1
+" map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PYTHON MODE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:pymode_run_key = '<leader>R'
+let g:pymode_rope_goto_def_newwin = 1
+nnoremap <F4> :PyLintToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GIST
