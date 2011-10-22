@@ -150,16 +150,12 @@ let g:tagbar_left = 1
 let g:tagbar_compact = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" FUZZY FINDER
+" CtrlP
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <silent> <Leader>f :FufBuffer<CR>
-nnoremap <silent> <Leader>o :FufFile<CR>
-nnoremap <silent> <Leader>,o :FufCoverageFile<CR>
-"nnoremap <silent> <Leader>b :FufBookmarkFile<CR>
-"nnoremap <silent> <Leader>a :FufBookmarkFileAdd<CR>
-nnoremap <silent> <Leader>l :FufLine<CR>
-nnoremap <silent> <Leader>v :FufTag<CR>
-noremap <silent> <C-]> :FufTagWithCursorWord!<CR>
+nnoremap <silent> <Leader>f :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>o :CtrlP<CR>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_open_multi = 2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOCOMPLCACHE
