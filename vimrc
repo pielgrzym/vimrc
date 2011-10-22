@@ -136,6 +136,8 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 let mapleader = ","
 
 nmap <silent> <Leader>w :set nowrap!<CR>
+nmap <silent> <C-k> :tabp<CR>
+nmap <silent> <C-j> :tabn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUNDO
@@ -156,6 +158,8 @@ nnoremap <silent> <Leader>f :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>o :CtrlP<CR>
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_open_multi = 2
+let g:ctrlp_jump_to_buffer = 0
+let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOCOMPLCACHE
