@@ -156,10 +156,11 @@ let g:tagbar_compact = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <Leader>f :CtrlPBuffer<CR>
 nnoremap <silent> <Leader>o :CtrlP<CR>
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_open_multi = 2
-let g:ctrlp_jump_to_buffer = 0
-let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*'
+let g:ctrlp_working_path_mode = 0 " no magic cwd changes
+let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being opened
+let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
+let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/* " completely ignore vcs dirs
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOCOMPLCACHE
