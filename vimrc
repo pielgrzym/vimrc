@@ -128,24 +128,18 @@ augroup ft_otl
         autocmd FileType otl set shiftwidth=4
 augroup END
 " }}}
-" Snipmate (python, html) ---------------------- {{{
+" Rope ----------------------------------------- {{{
+" let ropevim_goto_def_newwin=1
+" map <leader>j :RopeGotoDefinition<CR>
+map <leader>r :RopeRename<CR>
+" }}}
+" Python --------------------------------------- {{{
 augroup ft_python
         autocmd!
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType python set ft=python.django " For SnipMate
         autocmd FileType python set nosmartindent " For SnipMate
 augroup END
-augroup ft_html
-        autocmd!
-        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType html set ft=htmldjango.html " For SnipMate
-        autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
-augroup END
-" }}}
-" Rope ----------------------------------------- {{{
-" let ropevim_goto_def_newwin=1
-" map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
 " }}}
 " Python mode ---------------------------------- {{{
 let g:pymode_run_key = '<leader>R'
@@ -160,6 +154,14 @@ let g:gist_browser_command = 'firefox %URL%'
 " }}}
 " Templates ------------------------------------ {{{
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
+" }}}
+" Html ----------------------------------------- {{{
+augroup ft_html
+        autocmd!
+        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType html set ft=htmldjango.html " For SnipMate
+        autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
+augroup END
 " }}}
 " Java ----------------------------------------- {{{
 augroup ft_java
