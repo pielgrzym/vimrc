@@ -139,6 +139,9 @@ augroup ft_python
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType python set ft=python.django " For SnipMate
         autocmd FileType python set nosmartindent " For SnipMate
+        autocmd FileType python iabbrev dfe def
+        autocmd FileType python iabbrev exept except
+        autocmd FileType python iabbrev ecxept except
 augroup END
 " }}}
 " Python mode ---------------------------------- {{{
