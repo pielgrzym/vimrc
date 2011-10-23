@@ -47,6 +47,9 @@ set pastetoggle=<F12>
 set backspace=indent,eol,start " backspacing over all sorts of stuff
 filetype plugin on "Enable filetype plugin
 filetype indent on "Enable indenting plugin
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
 " }}}
 " Nowrap goodies ------------------------------- {{{
 set nowrap
@@ -63,7 +66,14 @@ set undodir=~/.vimundo
 " User interface and text formatting ----------- {{{
 set number "Show line numbers
 set wildmenu "Turn on WiLd menu
-set wildignore=*.pyc
+" wildignore taken from Steve Losh's config:
+set wildignore+=.hg,.git,.svn " Version control
+set wildignore+=*.aux,*.out,*.toc " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg " binary images
+set wildignore+=*.luac " Lua byte code
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.pyc " Python byte code
+set wildignore+=*.sw? " Vim swap files
 set shortmess=atI "Remove greeting msg and 'press a key' msgs
 set laststatus=2 "Statusline always visible
 set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [%p%%] "Better statusline format
@@ -110,7 +120,6 @@ let g:ctrlp_working_path_mode = 0 " no magic cwd changes
 let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being opened
 let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
 let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* " completely ignore vcs dirs
 " }}}
 " Neocomplcache -------------------------------- {{{
 let g:neocomplcache_enable_at_startup = 1
