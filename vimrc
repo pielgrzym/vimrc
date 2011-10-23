@@ -88,7 +88,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = ","
 " Quick edit vimrc:
-nnoremap <leader>ev :tnew $MYVIMRC<cr>
+nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 " Quick source vimrc:
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <Leader>w :set nowrap!<CR>
