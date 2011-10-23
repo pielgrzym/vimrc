@@ -74,19 +74,7 @@ set guifont=Terminus\ 10
 set expandtab "Use spaces to create tabs
 set ai "Auto indent
 set si "Smart indet
-" }}}
-" Syntax highligting --------------------------- {{{
 syntax on "Enable syntax highligting
-let php_sql_query = 1 "Highlight SQL queries inside php
-let php_htmlInStrings = 1 "Highlight HTML inside php strings
-
-"Highlight drupal's .module files as php
-if has("autocmd")
-  augroup module
-  autocmd BufRead *.module set filetype=php
-  autocmd BufRead *.mako set filetype=mako
-  augroup END
-endif
 " }}}
 " Autocompletion ------------------------------- {{{
 set completeopt=longest,menuone,preview
@@ -96,7 +84,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 " }}}
-" Keymappings ---------------------------------- {{{
+" Global Keymappings --------------------------- {{{
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = ","
 " Quick edit vimrc:
@@ -186,6 +174,17 @@ augroup ft_java
         autocmd FileType java set cinoptions+=jl
         autocmd FileType java nnoremap <silent> <Leader>t :TagbarToggle<CR>
 augroup END
+" }}}
+" PHP (ye old stuff!) -------------------------- {{{
+let php_sql_query = 1 "Highlight SQL queries inside php
+let php_htmlInStrings = 1 "Highlight HTML inside php strings
+"Highlight drupal's .module files as php {{{{
+if has("autocmd")
+  augroup module
+  autocmd BufRead *.module set filetype=php
+  autocmd BufRead *.mako set filetype=mako
+  augroup END
+endif " }}}
 " }}}
 " Vimscript file settings ---------------------- {{{
 augroup filetype_vim
