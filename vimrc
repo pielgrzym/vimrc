@@ -134,10 +134,13 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = ","
-
-nmap <silent> <Leader>w :set nowrap!<CR>
-nmap <silent> <C-k> :tabp<CR>
-nmap <silent> <C-j> :tabn<CR>
+" Quick edit vimrc:
+nnoremap <leader>ev :tnew $MYVIMRC<cr>
+" Quick source vimrc:
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <silent> <Leader>w :set nowrap!<CR>
+nnoremap <silent> <C-k> :tabp<CR>
+nnoremap <silent> <C-j> :tabn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUNDO
