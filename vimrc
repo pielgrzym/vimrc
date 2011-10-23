@@ -83,6 +83,8 @@ set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [
 "get rid of gvim toolbars and stuff
 set guioptions=
 set guifont=Terminus\ 10
+" Resize splits when the window is resized
+au VimResized * exe "normal! \<c-w>="
 " text formatting
 set expandtab "Use spaces to create tabs
 set ai "Auto indent
