@@ -139,16 +139,16 @@ augroup ft_python
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType python set ft=python.django " For SnipMate
         autocmd FileType python set nosmartindent " For SnipMate
-        autocmd FileType python iabbrev dfe def
-        autocmd FileType python iabbrev exept except
-        autocmd FileType python iabbrev ecxept except
+        autocmd FileType python iabbrev <buffer> dfe def
+        autocmd FileType python iabbrev <buffer> exept except
+        autocmd FileType python iabbrev <buffer> ecxept except
         " below two mapping to make for example:
         " from django.db import models
         " with cursor over this line cif will remove django.db and place
         " cursor there in insert mode
         " cii will remove stuff after the import statement
-        autocmd FileType python onoremap if :<c-u>normal! 0f <space>vt <cr>
-        autocmd FileType python onoremap ii :<c-u>execute "normal! 0/import\rwvg_"<cr>
+        autocmd FileType python onoremap <buffer> if :<c-u>normal! 0f <space>vt <cr>
+        autocmd FileType python onoremap <buffer> ii :<c-u>execute "normal! 0/import\rwvg_"<cr>
 augroup END
 " }}}
 " Python mode ---------------------------------- {{{
