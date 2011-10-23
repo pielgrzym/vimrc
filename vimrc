@@ -50,6 +50,9 @@ filetype indent on "Enable indenting plugin
 " Keep search matches in the middle of the window.
 nnoremap n nzzzv
 nnoremap N Nzzzv
+" same when jumping to changes!
+nnoremap g; g;zz
+nnoremap g, g,zz
 " }}}
 " Nowrap goodies ------------------------------- {{{
 set nowrap
@@ -180,6 +183,14 @@ augroup ft_html
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType html set ft=htmldjango.html " For SnipMate
         autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
+augroup END
+" }}}
+" Css ------------------------------------------ {{{
+augroup ft_css
+       autocmd! 
+       au BufNewFile,BufRead *.less,*.css setlocal foldmethod=marker
+       au BufNewFile,BufRead *.less,*.css setlocal foldmarker={,}
+       au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
 augroup END
 " }}}
 " Java ----------------------------------------- {{{
