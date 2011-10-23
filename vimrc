@@ -7,24 +7,21 @@
 
 " General initialization ----------------------- {{{
 set nocompatible "Turns off vi compatibility - adds cool functionality
-
-"Pathogen
+"Pathogen{{{
 "call pathogen#runtime_append_all_bundles()
 call pathogen#infect()
-"Eof Pathogen
+"Eof Pathogen}}}
 set t_Co=256 " without this line tmux/screen will do *bad* things to colors, dude
 " }}}
 " Solarized settings --------------------------- {{{
-function! SolLight()
+function! SolLight() " {{{
         set background=light
         colorscheme solarized
-endfunction
-
-function! SolDark()
+endfunction " }}}
+function! SolDark() "{{{
         set background=dark
         colorscheme solarized
-endfunction
-
+endfunction " }}}
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
@@ -48,7 +45,6 @@ set smartcase " make searches case-insensitive, unless they contain upper-case l
 set scrolljump=7
 set pastetoggle=<F12>
 set backspace=indent,eol,start " backspacing over all sorts of stuff
-
 filetype plugin on "Enable filetype plugin
 filetype indent on "Enable indenting plugin
 " }}}
@@ -128,14 +124,14 @@ let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
 let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* " completely ignore vcs dirs
 " }}}
-" NEOCOMPLCACHE -------------------------------- {{{
+" Neocomplcache -------------------------------- {{{
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1 " c_p -> compeltion -> current_page
 inoremap <expr><C-x> neocomplcache#smart_close_popup()."\<C-x>"
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 " }}}
-" VIMOUTLINER ---------------------------------- {{{
+" Vimoutliner ---------------------------------- {{{
 let otl_map_tabs = 1
 augroup ft_otl
         autocmd!
@@ -168,7 +164,7 @@ let g:pymode_run_key = '<leader>R'
 let g:pymode_rope_goto_def_newwin = 1
 nnoremap <F4> :PyLintToggle<CR>
 " }}}
-" GIST ----------------------------------------- {{{
+" Gist ----------------------------------------- {{{
 let g:gist_clip_command = 'xclip -selection clipboard'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
