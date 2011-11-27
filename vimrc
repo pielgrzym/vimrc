@@ -170,14 +170,7 @@ augroup END
 let g:pymode_run_key = '<leader>R'
 let g:pymode_rope_goto_def_newwin = 1
 let g:pymode_lint_config = '/home/pielgrzym/.vim/pylint.ini'
-function! PyLintCwindow()
-if g:pymode_lint_cwindow == 1
-        let g:pymode_lint_cwindow = 0
-else
-        let g:pymode_lint_cwindow = 1
-endif
-endfunction
-nnoremap <F4> :call PyLintCwindow()<CR>
+nnoremap <F4> :PyLintWindowToggle<CR>
 " }}}
 " Gist ----------------------------------------- {{{
 let g:gist_clip_command = 'xclip -selection clipboard'
