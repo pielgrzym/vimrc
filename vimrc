@@ -109,6 +109,8 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <Leader>w :set nowrap!<CR>
 nnoremap <silent> <C-k> :tabp<CR>
 nnoremap <silent> <C-j> :tabn<CR>
+" cmap in case we've forgotten to sudo vim before editing file ;)
+cmap _w w !sudo tee >/dev/null %
 " }}}
 " Gundo ---------------------------------------- {{{
 nnoremap <F5> :GundoToggle<CR>
