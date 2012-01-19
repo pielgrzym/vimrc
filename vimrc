@@ -110,6 +110,7 @@ nnoremap <silent> <C-k> :tabp<CR>
 nnoremap <silent> <C-j> :tabn<CR>
 " cmap in case we've forgotten to sudo vim before editing file ;)
 cmap _w w !sudo tee >/dev/null %
+cmap _r Git checkout -- %
 " }}}
 " Gundo ---------------------------------------- {{{
 nnoremap <F5> :GundoToggle<CR>
