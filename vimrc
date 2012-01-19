@@ -95,7 +95,6 @@ syntax on "Enable syntax highligting
 set completeopt=longest,menuone,preview
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 " }}}
@@ -182,6 +181,13 @@ let g:gist_browser_command = 'firefox %URL%'
 " }}}
 " Templates ------------------------------------ {{{
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
+" }}}
+" XML ----------------------------------------- {{{
+augroup ft_xml
+        autocmd!
+        autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+        autocmd FileType xml  let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '`': '`', '«': '»'}
+augroup END
 " }}}
 " Html ----------------------------------------- {{{
 augroup ft_html
