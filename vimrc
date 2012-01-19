@@ -230,3 +230,7 @@ augroup filetype_vim
     au FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
+" Powerline ---------------------- {{{
+"let g:Powerline_theme = "solarized"
+let g:Powerline_symbols = "unicode"
+" }}}
