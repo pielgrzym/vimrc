@@ -150,6 +150,12 @@ augroup END
 " map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 " }}}
+" Ruby --------------------------------------- {{{
+augroup ft_ruby
+        autocmd!
+        autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+augroup END
+" }}}
 " Python --------------------------------------- {{{
 augroup ft_python
         autocmd!
