@@ -154,6 +154,7 @@ map <leader>r :RopeRename<CR>
 augroup ft_ruby
         autocmd!
         autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
+        autocmd FileType ruby,eruby,yaml nmap <buffer> <leader>rci :%!ruby-code-indenter<cr>
 augroup END
 " }}}
 " Python --------------------------------------- {{{
