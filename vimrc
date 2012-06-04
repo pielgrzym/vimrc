@@ -203,7 +203,7 @@ augroup ft_html
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
         autocmd FileType html set ft=htmldjango.html " For SnipMate
         autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
-        autocmd FileType htmldjango set commentstring={#%s#}
+        autocmd FileType htmldjango set commentstring={#\ %s\ #}
 augroup END
 " }}}
 " Css ------------------------------------------ {{{
