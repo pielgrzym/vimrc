@@ -202,6 +202,7 @@ let g:pymode_run_key = '<leader>R'
 let g:pymode_rope_goto_def_newwin = 1
 let g:pymode_lint_config = '/home/pielgrzym/.vim/pylint.ini'
 let g:pymode_lint_cwindow = 0
+let g:pymode_folding = 0
 let g:pymode_syntax = 1
 nnoremap <F4> :PyLintWindowToggle<CR>
 " }}}
