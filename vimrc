@@ -199,7 +199,8 @@ augroup END
 " }}}
 " Python mode ---------------------------------- {{{
 let g:pymode_run_key = '<leader>R'
-let g:pymode_rope_goto_def_newwin = 1
+let g:pymode_rope_goto_def_newwin = 'new'
+let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_config = '/home/pielgrzym/.vim/pylint.ini'
 let g:pymode_lint_cwindow = 0
 let g:pymode_folding = 0
