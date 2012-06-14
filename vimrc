@@ -247,5 +247,9 @@ augroup END
 " }}}
 " Powerline ---------------------- {{{
 "let g:Powerline_theme = "solarized"
-let g:Powerline_symbols = "unicode"
+if has('gui_running')
+        let g:Powerline_symbols = "fancy"
+else
+        let g:Powerline_symbols = "compatible"
+endif
 " }}}
