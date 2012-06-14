@@ -171,11 +171,23 @@ augroup END
 augroup ft_python
         autocmd!
         autocmd FileType python set omnifunc=pythoncomplete#Complete
-        autocmd FileType python set ft=python.django " For SnipMate
+        " autocmd FileType python set ft=python.django " For SnipMate
         autocmd FileType python set nosmartindent " For SnipMate
         autocmd FileType python iabbrev <buffer> dfe def
         autocmd FileType python iabbrev <buffer> exept except
         autocmd FileType python iabbrev <buffer> ecxept except
+        " enable django models snippets if filename models.py
+        function! GetCustomSnippets()
+                let fname = expand('%:t')
+                if fname == 'models.py'
+                        :UltiSnipsAddFiletypes dj_models.dj_all.python 
+                elseif  fname == 'urls.py'
+                        :UltiSnipsAddFiletypes dj_urls.dj_all.python
+                elseif  fname == 'admin.py'
+                        :UltiSnipsAddFiletypes dj_admin.dj_all.python
+                endif
+        endfunction
+        autocmd FileType python :call GetCustomSnippets()
         " below two mapping to make for example:
         " from django.db import models
         " with cursor over this line cif will remove django.db and place
@@ -190,6 +202,7 @@ let g:pymode_run_key = '<leader>R'
 let g:pymode_rope_goto_def_newwin = 1
 let g:pymode_lint_config = '/home/pielgrzym/.vim/pylint.ini'
 let g:pymode_lint_cwindow = 0
+let g:pymode_syntax = 1
 nnoremap <F4> :PyLintWindowToggle<CR>
 " }}}
 " Gist ----------------------------------------- {{{
