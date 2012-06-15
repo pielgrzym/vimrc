@@ -185,6 +185,8 @@ augroup ft_python
                         :UltiSnipsAddFiletypes dj_urls.dj_all.python
                 elseif  fname == 'admin.py'
                         :UltiSnipsAddFiletypes dj_admin.dj_all.python
+                elseif  fname == 'views.py'
+                        :UltiSnipsAddFiletypes dj_views.dj_all.python
                 endif
         endfunction
         autocmd FileType python :call GetCustomSnippets()
