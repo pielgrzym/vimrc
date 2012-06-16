@@ -9,6 +9,7 @@
 set nocompatible "Turns off vi compatibility - adds cool functionality
 "Pathogen{{{
 "call pathogen#runtime_append_all_bundles()
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 "Eof Pathogen}}}
 set t_Co=256 " without this line tmux/screen will do *bad* things to colors, dude
