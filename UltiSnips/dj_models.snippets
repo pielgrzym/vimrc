@@ -1,0 +1,133 @@
+snippet auto "auto"
+${1:field} = models.AutoField()
+endsnippet
+
+snippet bool "bool"
+${1:field} = models.BooleanField(${2:default=True})
+endsnippet
+
+snippet char "char"
+${1:field} = models.CharField(max_length=${2}${3:, blank=True})
+endsnippet
+
+snippet comma "comma"
+${1:field} = models.CommaSeparatedIntegerField(max_length=${2}${3:, blank=True})
+endsnippet
+
+snippet date "date"
+${1:field} = models.DateField(${2:auto_now_add=True, auto_now=True}${3:, blank=True, null=True})
+endsnippet
+
+snippet datetime "datetime"
+${1:field} = models.DateTimeField(${2:auto_now_add=True, auto_now=True}${3:, blank=True, null=True})
+endsnippet
+
+snippet decimal "decimal"
+${1:field} = models.DecimalField(max_digits=${2}, decimal_places=${3})
+endsnippet
+
+snippet email "email"
+${1:field} = models.EmailField(max_length=${2:75}${3:, blank=True})
+endsnippet
+
+snippet file "file"
+${1:field} = models.FileField(upload_to=${2:path/for/upload}${3:, max_length=100})
+endsnippet
+
+snippet filepath "filepath"
+${1:field} = models.FilePathField(path=${2:"/abs/path/to/dir"}${3:, max_length=100}${4:, match="*.ext"}${5:, recursive=True}${6:, blank=True, })
+endsnippet
+
+snippet float "float"
+${1:field} = models.FloatField()
+endsnippet
+
+snippet image "image"
+${1:field} = models.ImageField(upload_to=${2:path/for/upload}${3:, height_field=height, width_field=width}${4:, max_length=100})
+endsnippet
+
+snippet int "int"
+${1:field} = models.IntegerField()
+endsnippet
+
+snippet ip "ip"
+${1:field} = models.IPAddressField()
+endsnippet
+
+snippet nullbool "nullbool"
+${1:field} = models.NullBooleanField()
+endsnippet
+
+snippet posint "posint"
+${1:field} = models.PositiveIntegerField()
+endsnippet
+
+snippet possmallint "possmallint"
+${1:field} = models.PositiveSmallIntegerField()
+endsnippet
+
+snippet slug "slug"
+${1:field} = models.SlugField(max_length=${2:50}${3:, blank=True})
+endsnippet
+
+snippet smallint "smallint"
+${1:field} = models.SmallIntegerField()
+endsnippet
+
+snippet text "text"
+${1:field} = models.TextField(${2:blank=True})
+endsnippet
+
+snippet time "time"
+${1:field} = models.TimeField(${2:auto_now_add=True, auto_now=True}${3:, blank=True, null=True})
+endsnippet
+
+snippet url "url"
+${1:field} = models.URLField(${2:verify_exists=False}${3:, max_length=200}${4:, blank=True})
+endsnippet
+
+snippet xml "xml"
+${1:field} = models.XMLField(schema_path=${2:None}${3:, blank=True})
+endsnippet
+
+snippet fk "fk"
+${1:field} = models.ForeignKey(${2:OtherModel}${3:, related_name=''}${4:, limit_choices_to=}${5:, to_field=''})
+endsnippet
+
+snippet m2m "m2m"
+${1:field} = models.ManyToManyField(${2:OtherModel}${3:, related_name=''}${4:, limit_choices_to=}${5:, symmetrical=False}${6:, through=''}${7:, db_table=''})
+endsnippet
+
+snippet o2o "o2o"
+${1:field} = models.OneToOneField(${2:OtherModel}${3:, parent_link=True}${4:, related_name=''}${5:, limit_choices_to=}${6:, to_field=''})
+endsnippet
+
+snippet form "form"
+class ${1:FormName}(forms.Form):
+	"""${2:docstring}"""
+	${3}
+endsnippet
+
+snippet model "model"
+class ${1:ModelName}(models.Model):
+	"""${2:docstring}"""
+	${3}
+endsnippet
+
+snippet meta "Meta for model" b
+class Meta:
+    ${1}
+endsnippet
+
+snippet unic "__unicode__ for model" b
+def __unicode__(self):
+    return self.${1}
+endsnippet
+
+snippet order "Ordering inside model's Meta" b
+ordering = ('${1}'${2})
+endsnippet
+
+snippet abst "Abstract class" b
+abstract = True
+endsnippet

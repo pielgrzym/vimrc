@@ -1,0 +1,17 @@
+snippet admin "admin"
+class ${1:ModelName}Admin(admin.ModelAdmin):
+	${2:list_display = (,)}
+admin.site.register($1, $1Admin)
+endsnippet
+
+snippet tabularinline "tabularinline"
+class ${1:ModelName}Inline(admin.TabularInline):
+	model = $1
+	extra = ${2:3}
+endsnippet
+
+snippet stackedinline "stackedinline"
+class ${1:ModelName}Inline(admin.StackedInline):
+	model = $1
+	extra = ${2:3}
+endsnippet

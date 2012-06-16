@@ -1,0 +1,18 @@
+snippet url "url() class" b
+url(r'${1:regexp}', ${2:view}, name="${3:`!p
+if t[2]:
+    if t[2][0].isupper(): # case - SomeView.as_view()
+        if "." in t[2]:
+            snip.rv = t[2].split(".")[0].lower()
+        else:
+            snip.rv = t[2].lower()
+    else: # case - dotted import or dotted path
+        if t[2][0] in ['"', "'"]:
+            p = t[2].replace("'", "").replace('"', '').lower()
+        else:
+            p = t[2].lower()
+        if "." in p:
+            snip.rv = p.split(".")[-1].lower()
+        else:
+            snip.rv = p.lower()`}${4}"),
+endsnippet
