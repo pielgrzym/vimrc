@@ -13,3 +13,22 @@ endsnippet
 snippet #c "coding: utf-8 comment" b
 # -*- coding: utf-8 -*-
 endsnippet
+
+snippet d "Two-line dict" b
+{
+${1}:${2},
+}
+endsnippet
+
+snippet l "Two-line list" b
+[
+${1},
+}
+endsnippet
+
+snippet step "Lettuce step decorated function" b
+@step(r"${1}")
+def ${2:step_name}(`!p
+snip.rv = 'step' + (", " if len(t[3]) else "")`${3:arg1}):
+    ${4:pass}
+endsnippet
