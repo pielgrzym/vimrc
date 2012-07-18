@@ -32,3 +32,15 @@ def ${2:step_name}(`!p
 snip.rv = 'step' + (", " if len(t[3]) else "")`${3:arg1}):
     ${4:pass}
 endsnippet
+
+snippet df "function without docstrings" b
+def ${1:function}(`!p
+if snip.indent:
+   snip.rv = 'self' + (", " if len(t[2]) else "")`${2:arg1}):
+	${0:pass}
+endsnippet
+
+snippet cl "Class without docstrings" b
+class ${1:MyClass}(${2:object}):
+    ${3:pass}
+endsnippet
