@@ -1,9 +1,6 @@
-"""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-"
-" VIMRC Pielgrzyma / Pielgrzym's VIMRC
-" v. 4.4
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""
+"  pielgrzym's vimrc  "
+"""""""""""""""""""""""
 
 " General initialization ----------------------- {{{
 set nocompatible "Turns off vi compatibility - adds cool functionality
@@ -156,12 +153,17 @@ augroup ft_otl
         autocmd FileType otl set shiftwidth=4
 augroup END
 " }}}
+" Ultisnips ------------------------------------ {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }}}
 " Rope ----------------------------------------- {{{
 " let ropevim_goto_def_newwin=1
 " map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 " }}}
-" Ruby --------------------------------------- {{{
+" Ruby ----------------------------------------- {{{
 augroup ft_ruby
         autocmd!
         autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
@@ -219,7 +221,7 @@ let g:gist_browser_command = 'firefox %URL%'
 " Templates ------------------------------------ {{{
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
 " }}}
-" XML ----------------------------------------- {{{
+" XML ------------------------------------------ {{{
 augroup ft_xml
         autocmd!
         autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
@@ -274,7 +276,7 @@ augroup filetype_vim
     au FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-" Powerline ---------------------- {{{
+" Powerline ------------------------------------ {{{
 "let g:Powerline_theme = "solarized"
 if has('gui_running')
         let g:Powerline_symbols = "fancy"
