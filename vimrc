@@ -154,7 +154,7 @@ augroup ft_otl
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
-" let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsExpandTrigger="<C-l>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}

@@ -50,6 +50,10 @@ snippet l "Two-line list" i
 ]
 endsnippet
 
+snippet lc "List compr. -> [ x for x in y ]" i
+[${3:$2} for ${2:elem} in ${1:list}${4: if $2}]
+endsnippet
+
 snippet "ste?p?" "Lettuce step decorated function" rb
 @step(r"${1}")
 def ${2:step_name}(step${3:`!p check_regexp_for_params(snip, t)`}):
