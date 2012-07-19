@@ -154,7 +154,7 @@ augroup ft_otl
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
-let g:UltiSnipsExpandTrigger="<C-l>"
+" let g:UltiSnipsExpandTrigger="<C-l>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
@@ -231,9 +231,6 @@ augroup END
 " Html ----------------------------------------- {{{
 augroup ft_html
         autocmd!
-        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-        autocmd FileType html set ft=htmldjango.html " For SnipMate
-        autocmd FileType xhtml set ft=htmldjango.html " For SnipMate
         autocmd FileType htmldjango set commentstring={#\ %s\ #}
 augroup END
 " }}}
