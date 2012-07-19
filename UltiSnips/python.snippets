@@ -18,11 +18,7 @@ def check_regexp_for_params(snip, t):
         arg_count = fb(t[1])
         if arg_count:
             args = ", ".join( ["arg%d" % (x+1) for x in range(arg_count)] )
-            snip.rv = 'step' + ', ' + args + (", " if len(t[3]) else "")
-        else:
-            snip.rv = 'step' + (", " if len(t[3]) else "")
-    else:
-        snip.rv = 'step' + (", " if len(t[3]) else "")
+            snip.rv = ', ' + args
 
 endglobal
 
@@ -54,9 +50,9 @@ ${1},
 }
 endsnippet
 
-snippet step "Lettuce step decorated function" b
+snippet st "Lettuce step decorated function" b
 @step(r"${1}")
-def ${2:step_name}(`!p check_regexp_for_params(snip, t)`${3:argX}):
+def ${2:step_name}(step${3:`!p check_regexp_for_params(snip, t)`}):
     ${4:pass}
 endsnippet
 
