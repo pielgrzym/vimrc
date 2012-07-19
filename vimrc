@@ -192,6 +192,20 @@ augroup ft_python
                         :UltiSnipsAddFiletypes dj_views.dj_all.python
                 endif
         endfunction
+        " hit T to run doctests for current file and output errors into 
+        " new vertical split buffer
+        function! RunDoctests()
+                let fname = expand('%:p')
+                :silent w
+                :silent vne 'python_doctest_result'
+                :set ft=python
+                :set buftype=nofile
+                :setlocal noswapfile
+                :exec ':silent r!python2 -m doctest -f' fname
+                :nnoremap <buffer> q :bd<cr>
+        endfunction
+        autocmd FileType python nnoremap T :call RunDoctests()<cr>
+
         autocmd FileType python :call GetCustomSnippets()
         " below two mapping to make for example:
         " from django.db import models
