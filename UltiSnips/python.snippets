@@ -38,19 +38,19 @@ snippet #c "coding: utf-8 comment" b
 # -*- coding: utf-8 -*-
 endsnippet
 
-snippet d "Two-line dict" b
+snippet d "Two-line dict" i
 {
-${1}:${2},
+    ${1}
 }
 endsnippet
 
-snippet l "Two-line list" b
+snippet l "Two-line list" i
 [
-${1},
-}
+    ${1}
+]
 endsnippet
 
-snippet st "Lettuce step decorated function" b
+snippet "ste?p?" "Lettuce step decorated function" rb
 @step(r"${1}")
 def ${2:step_name}(step${3:`!p check_regexp_for_params(snip, t)`}):
     ${4:pass}
@@ -66,4 +66,8 @@ endsnippet
 snippet cl "Class without docstrings" b
 class ${1:MyClass}(${2:object}):
     ${3:pass}
+endsnippet
+
+snippet f "Function call" i
+${1:function}(${VISUAL}${2})
 endsnippet
