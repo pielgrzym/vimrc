@@ -1,3 +1,31 @@
+global !p
+def fb(string, c=0):
+    '''Count brackets'''
+    left_bracket = string.find("(")
+    if left_bracket > -1:
+        string = string[left_bracket + 1:]
+        right_bracket = string.find(")")
+        if right_bracket > -1:
+            if string[:right_bracket].find("(") == -1:
+                c += 1
+            string = string[right_bracket + 1:]
+        return fb(string, c)
+    else:
+        return c
+
+def check_regexp_for_params(snip, t):
+    if len(t[1]):
+        arg_count = fb(t[1])
+        if arg_count:
+            args = ", ".join( ["arg%d" % (x+1) for x in range(arg_count)] )
+            snip.rv = 'step' + ', ' + args + (", " if len(t[3]) else "")
+        else:
+            snip.rv = 'step' + (", " if len(t[3]) else "")
+    else:
+        snip.rv = 'step' + (", " if len(t[3]) else "")
+
+endglobal
+
 snippet i "Python import statement" b
 import ${1}
 endsnippet
@@ -28,8 +56,7 @@ endsnippet
 
 snippet step "Lettuce step decorated function" b
 @step(r"${1}")
-def ${2:step_name}(`!p
-snip.rv = 'step' + (", " if len(t[3]) else "")`${3:arg1}):
+def ${2:step_name}(`!p check_regexp_for_params(snip, t)`${3:argX}):
     ${4:pass}
 endsnippet
 
