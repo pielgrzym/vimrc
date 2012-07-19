@@ -154,9 +154,9 @@ augroup ft_otl
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }}}
 " Rope ----------------------------------------- {{{
 " let ropevim_goto_def_newwin=1
