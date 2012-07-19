@@ -34,7 +34,7 @@ snippet t "Todo"
 # TODO: ${1:desc} `!v strftime("%c")` (`echo $USER`)
 endsnippet
 
-snippet #c "coding: utf-8 comment" b
+snippet # "coding: utf-8 comment" b
 # -*- coding: utf-8 -*-
 endsnippet
 
@@ -70,4 +70,8 @@ endsnippet
 
 snippet f "Function call" i
 ${1:function}(${VISUAL}${2})
+endsnippet
+
+snippet ipdb "Set IPDB breakpoint" b
+import ipdb; ipdb.set_trace()
 endsnippet
