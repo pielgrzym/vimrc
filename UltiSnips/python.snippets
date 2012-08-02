@@ -38,12 +38,16 @@ snippet fm "Import from models" b
 from ${1:app}.models import ${2:name}
 endsnippet
 
-snippet t "Todo"
+snippet todo "Todo"
 # TODO: ${1:desc} `!v strftime("%c")` (`echo $USER`)
 endsnippet
 
 snippet # "coding: utf-8 comment" b
 # -*- coding: utf-8 -*-
+endsnippet
+
+snippet g "Dictionary/list getattr" w
+${1:dict}[${2:key}]
 endsnippet
 
 snippet { "Two-line dict" w
