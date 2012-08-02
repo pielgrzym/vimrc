@@ -87,3 +87,8 @@ endsnippet
 snippet ipdb "Set IPDB breakpoint" b
 import ipdb; ipdb.set_trace()
 endsnippet
+
+snippet qs "Django queryset"
+${1:set} = ${2:Model}.${3:objects}.${4:filter}(${5:${6:pk}=${7:pk}})
+endsnippet
+
