@@ -30,6 +30,14 @@ snippet fi "Python from ... import statement" b
 from ${1} import ${2}
 endsnippet
 
+snippet fv "Import from views" b
+from ${1:app}.views import ${2:name}
+endsnippet
+
+snippet fm "Import from models" b
+from ${1:app}.models import ${2:name}
+endsnippet
+
 snippet t "Todo"
 # TODO: ${1:desc} `!v strftime("%c")` (`echo $USER`)
 endsnippet
@@ -38,19 +46,19 @@ snippet # "coding: utf-8 comment" b
 # -*- coding: utf-8 -*-
 endsnippet
 
-snippet d "Two-line dict" i
+snippet { "Two-line dict" w
 {
     ${1}
-}
+
 endsnippet
 
-snippet l "Two-line list" i
+snippet [ "Two-line list" w
 [
     ${1}
-]
+
 endsnippet
 
-snippet lc "List compr. -> [ x for x in y ]" i
+snippet lc "List compr. -> [ x for x in y ]" w
 [${3:$2} for ${2:elem} in ${1:list}${4: if $2}]
 endsnippet
 
@@ -72,7 +80,7 @@ class ${1:MyClass}(${2:object}):
     ${3:pass}
 endsnippet
 
-snippet f "Function call" i
+snippet f "Function call" w
 ${1:function}(${VISUAL}${2})
 endsnippet
 
