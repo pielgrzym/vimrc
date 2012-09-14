@@ -125,8 +125,9 @@ nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
 nnoremap <silent> <Leader>c :CtrlPChange<CR> 
 nnoremap <silent> <Leader>o :CtrlP<CR>
-let g:ctrlp_cmd = 'CtrlPMixed' " show all mru, bufs, files to open
-let g:ctrlp_working_path_mode = 2 " set path to nearest parent containing .git
+let g:ctrlp_cmd = 'CtrlPMRU' " show all mru by default
+let g:ctrlp_mruf_relative = 1 " only mru from current workdir
+let g:ctrlp_working_path_mode = 'r' " set path to nearest parent containing .git
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files'] " use git to search for files
 let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being opened
 let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
@@ -134,7 +135,7 @@ let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those 
 let g:ctrlp_follow_symlinks = 1 " prooves quite usefull
 if getcwd() == $HOME
         let g:ctrlp_max_depth = 0
-        let g:ctrlp_working_path_mode = 1 " set path to pwd
+        let g:ctrlp_working_path_mode = 'c' " set path to pwd
 endif
 " }}}
 " Neocomplcache -------------------------------- {{{
