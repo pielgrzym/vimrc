@@ -130,3 +130,6 @@
 	path = bundle/min-yank-ring
 	url = https://github.com/the-isz/MinYankRing.vim.git
         ignore = untracked
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
