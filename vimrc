@@ -154,6 +154,9 @@ augroup ft_otl
         autocmd FileType otl set shiftwidth=4
 augroup END
 " }}}
+" Vim-pad -------------------------------------- {{{
+let g:pad_dir="~/annex/notes"
+" }}}
 " Ultisnips ------------------------------------ {{{
 " let g:UltiSnipsExpandTrigger="<C-l>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
