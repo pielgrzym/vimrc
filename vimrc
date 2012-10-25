@@ -107,9 +107,12 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> <Leader>w :set nowrap!<CR>
 nnoremap <silent> <C-k> :tabp<CR>
 nnoremap <silent> <C-j> :tabn<CR>
+nnoremap <silent> <Leader>x :MkS<CR>
+nnoremap <silent> <Leader>X :MkS <CR> :qal<CR>
 " cmap in case we've forgotten to sudo vim before editing file ;)
-cmap _w w !sudo tee >/dev/null %
-cmap _r Git checkout -- %
+cmap `w w !sudo tee >/dev/null %
+" git reset file changes
+cmap `r Git checkout -- %
 " }}}
 " Gundo ---------------------------------------- {{{
 nnoremap <F5> :GundoToggle<CR>
@@ -126,6 +129,7 @@ nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
 nnoremap <silent> <Leader>c :CtrlPChange<CR> 
 nnoremap <silent> <Leader>o :CtrlP<CR>
+nnoremap <silent> <Leader>` :CtrlPSessions<CR>
 let g:ctrlp_cmd = 'CtrlPMRU' " show all mru by default
 let g:ctrlp_mruf_relative = 1 " only mru from current workdir
 let g:ctrlp_working_path_mode = 'r' " set path to nearest parent containing .git
@@ -134,6 +138,7 @@ let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being ope
 let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
 let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
 let g:ctrlp_follow_symlinks = 1 " prooves quite usefull
+let g:ctrlp_extensions = ['sessions']
 if getcwd() == $HOME
         let g:ctrlp_max_depth = 0
         let g:ctrlp_working_path_mode = 'c' " set path to pwd
