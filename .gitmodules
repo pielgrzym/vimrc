@@ -134,3 +134,6 @@
 [submodule "bundle/ctrlp_sessions"]
 	path = bundle/ctrlp_sessions
 	url = https://github.com/pielgrzym/ctrlp-sessions.git
+[submodule "bundle/todotxt"]
+	path = bundle/todotxt
+	url = https://github.com/boushley/todo.txt-vim.git
