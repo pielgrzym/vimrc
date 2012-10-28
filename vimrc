@@ -161,7 +161,7 @@ augroup ft_otl
 augroup END
 " }}}
 " Vim-pad -------------------------------------- {{{
-let g:pad_dir="~/annex/notes"
+let g:pad_dir="~/Dropbox/notes"
 " }}}
 " Ultisnips ------------------------------------ {{{
 " let g:UltiSnipsExpandTrigger="<C-l>"
