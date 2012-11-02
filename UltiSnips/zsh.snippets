@@ -68,15 +68,16 @@ while ${2:[[ ${1:condition} ]]}; do
 done
 endsnippet
 
+# http://mywiki.wooledge.org/BashFAQ/001
 snippet read "while loop to read from file"
-while read ${2:line}
+while read -r ${2:line}
 do
         ${3:#statements}
 done <${1:file}
 endsnippet
 
 snippet "readf(ields)?" "while loop to read with IFS" rw
-while IFS=:${2: field1 field2 field3}
+while IFS=: read -r ${2:field1 field2 field3}
 do
         ${3:# echo $field1; echo $field2}
 done <${1:file}
