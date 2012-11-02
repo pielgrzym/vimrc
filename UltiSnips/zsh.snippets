@@ -77,9 +77,9 @@ done <${1:file}
 endsnippet
 
 snippet "readf(ields)?" "while loop to read with IFS" rw
-while IFS=: read -r ${2:field1 field2 field3}
+while IFS=${2::} read -r ${3:field1 field2 field3}
 do
-        ${3:# echo $field1; echo $field2}
+        ${4:# echo $field1; echo $field2}
 done <${1:file}
 endsnippet
 
