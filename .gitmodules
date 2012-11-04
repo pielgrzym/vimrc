@@ -20,7 +20,7 @@
         ignore = untracked
 [submodule "bundle/matchit"]
 	path = bundle/matchit
-	url = https://github.com/mhz/vim-matchit.git
+	url = https://github.com/tsaleh/vim-matchit.git
         ignore = untracked
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
