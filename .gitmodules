@@ -137,3 +137,6 @@
 [submodule "bundle/todotxt"]
 	path = bundle/todotxt
 	url = https://github.com/boushley/todo.txt-vim.git
+[submodule "bundle/ctrlp_ft"]
+	path = bundle/ctrlp_ft
+	url = https://github.com/endel/ctrlp-filetype.vim.git

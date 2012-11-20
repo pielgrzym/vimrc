@@ -124,6 +124,7 @@ let g:tagbar_compact = 1
 " }}}
 " CtrlP ---------------------------------------- {{{
 nnoremap <silent> <Leader>f :CtrlPBuffer<CR>
+nnoremap <silent> <Leader>F :CtrlPFiletype<CR>
 " show pylint window. PURRRRRFECT!!!
 nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
@@ -138,7 +139,7 @@ let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being ope
 let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
 let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
 let g:ctrlp_follow_symlinks = 1 " prooves quite usefull
-let g:ctrlp_extensions = ['sessions']
+let g:ctrlp_extensions = ['sessions', 'filetype']
 " if getcwd() == $HOME
 "         let g:ctrlp_max_depth = 0
 "         let g:ctrlp_working_path_mode = 'c' " set path to pwd
