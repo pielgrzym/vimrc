@@ -130,6 +130,7 @@ nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
 nnoremap <silent> <Leader>c :CtrlPChange<CR> 
 nnoremap <silent> <Leader>o :CtrlP<CR>
+nnoremap <silent> <Leader>d :CtrlPTag<CR>
 nnoremap <silent> <Leader>` :CtrlPSessions<CR>
 let g:ctrlp_cmd = 'CtrlPMRU' " show all mru by default
 let g:ctrlp_mruf_relative = 1 " only mru from current workdir
@@ -139,7 +140,7 @@ let g:ctrlp_open_multi = 3 " open max 3 splits when multiple files are being ope
 let g:ctrlp_jump_to_buffer = 0 " allows to open one buffer more than once
 let g:ctrlp_mruf_exclude = 'media/tinymce/.*\|static/tinymce/.*' " ignore those parts of django proj
 let g:ctrlp_follow_symlinks = 1 " prooves quite usefull
-let g:ctrlp_extensions = ['sessions', 'filetype']
+let g:ctrlp_extensions = ['sessions', 'filetype', 'tags']
 " if getcwd() == $HOME
 "         let g:ctrlp_max_depth = 0
 "         let g:ctrlp_working_path_mode = 'c' " set path to pwd
