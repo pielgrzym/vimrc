@@ -184,6 +184,21 @@ augroup ft_ruby
         autocmd FileType ruby,eruby,yaml nmap <buffer> <leader>rci :%!ruby-code-indenter<cr>
 augroup END
 " }}}
+" Django docs --------------------------------------- {{{
+" Search tags generated for django .rst docs source files
+" to find documentation with CtrlP and open it in given window
+function! SearchDjangoDocs()
+        let g:django_docs_path = "/home/pielgrzym/work/django_docs/docs/"
+        let g:oldtags = &tags
+        let g:oldpwd = getcwd()
+        :cd `=g:django_docs_path`
+        let &tags = g:django_docs_path."tags"
+        :CtrlPTag
+        let &tags = g:oldtags
+endfunction
+autocmd BufRead */django_docs/django/docs/* set filetype=rst
+noremap <leader>? :call SearchDjangoDocs()<CR>
+" }}}
 " Python --------------------------------------- {{{
 augroup ft_python
         autocmd!
