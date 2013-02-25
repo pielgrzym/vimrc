@@ -140,3 +140,6 @@
 [submodule "bundle/ctrlp_ft"]
 	path = bundle/ctrlp_ft
 	url = https://github.com/endel/ctrlp-filetype.vim.git
+[submodule "bundle/nginx_syntax"]
+	path = bundle/nginx_syntax
+	url = https://github.com/evanmiller/nginx-vim-syntax.git
