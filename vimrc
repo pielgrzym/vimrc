@@ -22,7 +22,7 @@ function! SolDark() "{{{
 endfunction " }}}
 set background=dark
 colorscheme solarized
-"let g:solarized_termcolors = 256
+let g:solarized_termcolors = 256
 if has('gui_running')
         call togglebg#map("<F1>")
 else
