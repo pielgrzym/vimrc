@@ -80,7 +80,7 @@ set laststatus=2 "Statusline always visible
 set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [%p%%] "Better statusline format
 "get rid of gvim toolbars and stuff
 set guioptions=
-set guifont=Terminus\ 8
+set guifont=Terminus\ Medium\ for\ Powerline:h13
 " Resize splits when the window is resized
 " au VimResized * exe "normal! \<c-w>="
 set noea " no equalalways - closing a window will not resize other!
