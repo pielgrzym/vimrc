@@ -143,3 +143,6 @@
 [submodule "bundle/nginx_syntax"]
 	path = bundle/nginx_syntax
 	url = https://github.com/evanmiller/nginx-vim-syntax.git
+[submodule "bundle/puppet-syntax"]
+	path = bundle/puppet-syntax
+	url = https://github.com/puppetlabs/puppet-syntax-vim.git
