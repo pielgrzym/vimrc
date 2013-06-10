@@ -180,6 +180,12 @@ let g:pad_dir="~/Dropbox/notes"
 " map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 " }}}
+" Puppet ----------------------------------------- {{{
+augroup ft_puppet
+        autocmd!
+        autocmd FileType puppet set ai sw=2 sts=2 et
+augroup END
+" }}}
 " Ruby ----------------------------------------- {{{
 augroup ft_ruby
         autocmd!
