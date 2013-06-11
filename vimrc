@@ -22,7 +22,6 @@ function! SolDark() "{{{
 endfunction " }}}
 set background=dark
 colorscheme solarized
-let g:solarized_termcolors = 256
 if has('gui_running')
         call togglebg#map("<F1>")
 else
@@ -327,10 +326,6 @@ augroup END
 " }}}
 " Powerline ------------------------------------ {{{
 "let g:Powerline_theme = "solarized"
-if has('gui_running')
-        let g:Powerline_symbols = "fancy"
-else
-        let g:Powerline_symbols = "compatible"
-endif
+let g:Powerline_symbols = "fancy"
 " }}}
 " 
