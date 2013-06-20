@@ -146,3 +146,6 @@
 [submodule "bundle/puppet-syntax"]
 	path = bundle/puppet-syntax
 	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+[submodule "bundle/bro"]
+	path = bundle/bro
+	url = git://github.com/mephux/bro.vim.git
