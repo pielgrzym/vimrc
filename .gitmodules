@@ -34,9 +34,9 @@
 	path = bundle/gitv
 	url = git://github.com/gregsexton/gitv.git
         ignore = untracked
-[submodule "bundle/zencoding"]
-	path = bundle/zencoding
-	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/emmet"]
+	path = bundle/emmet
+        url = https://github.com/mattn/emmet-vim.git
         ignore = untracked
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
