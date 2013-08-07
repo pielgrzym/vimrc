@@ -139,6 +139,12 @@ nnoremap <silent> <Leader>g :Unite grep:.<CR>
 "nnoremap <silent> <Leader>T :CtrlPBufTagAll<CR>
 "nnoremap <silent> <Leader>` :CtrlPSessions<CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()"{{{
+  " Overwrite settings.
+  imap <buffer> <C-j> <Plug>(unite_select_next_line)
+  imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+endfunction
 let g:unite_enable_start_insert=1
 let g:ctrlp_cmd = 'CtrlPMRU' " show all mru by default
 let g:ctrlp_mruf_relative = 1 " only mru from current workdir

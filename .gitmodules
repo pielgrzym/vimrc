@@ -144,3 +144,9 @@
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/unite-tag"]
+	path = bundle/unite-tag
+	url = https://github.com/tsukkee/unite-tag
+[submodule "bundle/unite-quickfix"]
+	path = bundle/unite-quickfix
+	url = https://github.com/osyo-manga/unite-quickfix
