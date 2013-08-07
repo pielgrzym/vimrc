@@ -325,8 +325,8 @@ augroup filetype_vim
     au FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-" Powerline ------------------------------------ {{{
-"let g:Powerline_theme = "solarized"
-let g:Powerline_symbols = "fancy"
+" Airline ------------------------------------ {{{
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 " }}}
 " 
