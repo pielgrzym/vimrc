@@ -125,18 +125,21 @@ nnoremap <silent> <Leader>l :TagbarOpenAutoClose<CR>
 let g:tagbar_left = 1
 let g:tagbar_compact = 1
 " }}}
-" CtrlP ---------------------------------------- {{{
-nnoremap <silent> <Leader>f :CtrlPBuffer<CR>
-nnoremap <silent> <Leader>F :CtrlPFiletype<CR>
+" Unite ---------------------------------------- {{{
+nnoremap <silent> <Leader>f :Unite buffer<CR>
+"nnoremap <silent> <Leader>F :CtrlPFiletype<CR>
 " show pylint window. PURRRRRFECT!!!
-nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
+"nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
-nnoremap <silent> <Leader>c :CtrlPChange<CR>
-nnoremap <silent> <Leader>o :CtrlP<CR>
-nnoremap <silent> <Leader>d :CtrlPTag<CR>
-nnoremap <silent> <Leader>t :CtrlPBufTag<CR>
-nnoremap <silent> <Leader>T :CtrlPBufTagAll<CR>
-nnoremap <silent> <Leader>` :CtrlPSessions<CR>
+"nnoremap <silent> <Leader>c :CtrlPChange<CR>
+nnoremap <silent> <Leader>o :Unite file_rec/async<CR>
+nnoremap <silent> <Leader>g :Unite grep:.<CR>
+"nnoremap <silent> <Leader>d :CtrlPTag<CR>
+"nnoremap <silent> <Leader>t :CtrlPBufTag<CR>
+"nnoremap <silent> <Leader>T :CtrlPBufTagAll<CR>
+"nnoremap <silent> <Leader>` :CtrlPSessions<CR>
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+let g:unite_enable_start_insert=1
 let g:ctrlp_cmd = 'CtrlPMRU' " show all mru by default
 let g:ctrlp_mruf_relative = 1 " only mru from current workdir
 let g:ctrlp_working_path_mode = 'r' " set path to nearest parent containing .git
