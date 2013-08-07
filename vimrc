@@ -329,5 +329,6 @@ augroup END
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_detect_whitespace=0
+let g:airline_mode_map = {'R': 'R', 'c': 'CMD   ', 'V': 'VL', 'v': 'V', 'i': 'I', '^V': 'VB', 'n': 'N'}
 " }}}
 "
