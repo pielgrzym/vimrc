@@ -140,7 +140,7 @@ nnoremap <silent> <Leader>g :Unite grep:.<CR>
 "nnoremap <silent> <Leader>` :CtrlPSessions<CR>
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
 autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()"{{{
+function! s:unite_my_settings()
   " Overwrite settings.
   imap <buffer> <C-j> <Plug>(unite_select_next_line)
   imap <buffer> <C-k> <Plug>(unite_select_previous_line)
