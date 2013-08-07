@@ -148,3 +148,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline
+[submodule "bundle/ctrlp-gist"]
+	path = bundle/ctrlp-gist
+	url = https://github.com/mattn/ctrlp-gist.git
