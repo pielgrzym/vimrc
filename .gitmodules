@@ -66,10 +66,6 @@
 	path = bundle/python_mode
 	url = https://github.com/klen/python-mode.git
         ignore = untracked
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
-        ignore = untracked
 [submodule "bundle/rubycomplete"]
 	path = bundle/rubycomplete
 	url = https://github.com/vim-scripts/rubycomplete.vim.git
@@ -127,15 +123,9 @@
 [submodule "bundle/vim-pad"]
 	path = bundle/vim-pad
 	url = https://github.com/fmoralesc/vim-pad.git
-[submodule "bundle/ctrlp_sessions"]
-	path = bundle/ctrlp_sessions
-	url = https://github.com/pielgrzym/ctrlp-sessions.git
 [submodule "bundle/todotxt"]
 	path = bundle/todotxt
 	url = https://github.com/boushley/todo.txt-vim.git
-[submodule "bundle/ctrlp_ft"]
-	path = bundle/ctrlp_ft
-	url = https://github.com/endel/ctrlp-filetype.vim.git
 [submodule "bundle/nginx_syntax"]
 	path = bundle/nginx_syntax
 	url = https://github.com/evanmiller/nginx-vim-syntax.git
