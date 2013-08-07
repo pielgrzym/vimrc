@@ -131,7 +131,7 @@ nnoremap <silent> <Leader>F :CtrlPFiletype<CR>
 " show pylint window. PURRRRRFECT!!!
 nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
-nnoremap <silent> <Leader>c :CtrlPChange<CR> 
+nnoremap <silent> <Leader>c :CtrlPChange<CR>
 nnoremap <silent> <Leader>o :CtrlP<CR>
 nnoremap <silent> <Leader>d :CtrlPTag<CR>
 nnoremap <silent> <Leader>t :CtrlPBufTag<CR>
@@ -221,7 +221,7 @@ augroup ft_python
         function! GetCustomSnippets()
                 let fname = expand('%:t')
                 if fname == 'models.py'
-                        :UltiSnipsAddFiletypes dj_models.dj_all.python 
+                        :UltiSnipsAddFiletypes dj_models.dj_all.python
                 elseif  fname == 'urls.py'
                         :UltiSnipsAddFiletypes dj_urls.dj_all.python
                 elseif  fname == 'admin.py'
@@ -230,7 +230,7 @@ augroup ft_python
                         :UltiSnipsAddFiletypes dj_views.dj_all.python
                 endif
         endfunction
-        " hit T to run doctests for current file and output errors into 
+        " hit T to run doctests for current file and output errors into
         " new vertical split buffer
         function! RunDoctests()
                 let fname = expand('%:p')
@@ -288,7 +288,7 @@ augroup END
 " }}}
 " Css ------------------------------------------ {{{
 augroup ft_css
-       autocmd! 
+       autocmd!
        au BufNewFile,BufRead *.less,*.css setlocal foldmethod=marker
        au BufNewFile,BufRead *.less,*.css setlocal foldmarker={,}
        au BufNewFile,BufRead *.less,*.css nnoremap <buffer> <leader>S ?{<CR>jV/\v^\s*\}?$<CR>k:sort<CR>:noh<CR>
@@ -328,5 +328,6 @@ augroup END
 " Airline ------------------------------------ {{{
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
+let g:airline_detect_whitespace=0
 " }}}
-" 
+"
