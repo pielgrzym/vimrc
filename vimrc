@@ -80,7 +80,7 @@ set laststatus=2 "Statusline always visible
 set statusline=[%n]\ %f%-m%-r%-h%-w\ [%Y]\ [%l/%L\]\ %{fugitive#statusline()}\ [%p%%] "Better statusline format
 "get rid of gvim toolbars and stuff
 set guioptions=
-set guifont=Terminus\ Medium\ for\ Powerline:h13
+set guifont=Meslo\ LG\ S\ for\ Powerline\ 8
 if has("gui_macvim")
         set guifont=Terminus\ Medium\ for\ Powerline:h14
 endif
