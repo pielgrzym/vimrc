@@ -180,7 +180,13 @@ let g:pad_dir="~/Dropbox/notes"
 " map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 " }}}
-" Puppet ----------------------------------------- {{{
+" Bash/zsh/etc --------------------------------- {{{
+augroup ft_bash
+        autocmd!
+        autocmd FileType bash,sh,zsh set ai sw=4 sts=4 et
+augroup END
+" }}}
+" Puppet --------------------------------------- {{{
 augroup ft_puppet
         autocmd!
         autocmd FileType puppet set ai sw=2 sts=2 et
@@ -193,7 +199,7 @@ augroup ft_ruby
         autocmd FileType ruby,eruby,yaml nmap <buffer> <leader>rci :%!ruby-code-indenter<cr>
 augroup END
 " }}}
-" Django docs --------------------------------------- {{{
+" Django docs ---------------------------------- {{{
 " Search tags generated for django .rst docs source files
 " to find documentation with CtrlP and open it in given window
 function! SearchDjangoDocs()
@@ -325,7 +331,7 @@ augroup filetype_vim
     au FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-" Airline ------------------------------------ {{{
+" Airline -------------------------------------- {{{
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_detect_whitespace=0
