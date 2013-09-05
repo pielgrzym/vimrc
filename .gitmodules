@@ -148,3 +148,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline
+[submodule "bundle/git-grep-vim"]
+	path = bundle/git-grep-vim
+	url = https://github.com/tjennings/git-grep-vim.git
