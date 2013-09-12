@@ -98,10 +98,6 @@
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
         ignore = untracked
-[submodule "bundle/nrrrgn"]
-	path = bundle/nrrrgn
-	url = https://github.com/chrisbra/NrrwRgn.git
-        ignore = untracked
 [submodule "bundle/gitolite"]
 	path = bundle/gitolite
 	url = https://github.com/tmatilai/gitolite.vim.git
