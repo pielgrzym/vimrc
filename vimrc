@@ -214,6 +214,16 @@ endfunction
 autocmd BufRead */django_docs/django/docs/* set filetype=rst
 noremap <leader>? :call SearchDjangoDocs()<CR>
 " }}}
+" Nginx ----------------------------------------- {{{
+function! NginxFt()
+        autocmd BufRead *.conf set filetype=nginx
+endfunction
+augroup ft_nginx
+        autocmd!
+        autocmd BufRead nginx.conf set ft=nginx
+        call NginxFt()
+augroup END
+" }}}
 " Python --------------------------------------- {{{
 augroup ft_python
         autocmd!
