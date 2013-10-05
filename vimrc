@@ -214,6 +214,12 @@ endfunction
 autocmd BufRead */django_docs/django/docs/* set filetype=rst
 noremap <leader>? :call SearchDjangoDocs()<CR>
 " }}}
+" Vagrant --------------------------------------- {{{
+augroup ft_vagrant
+        autocmd!
+        autocmd BufRead Vagrantfile set ft=ruby
+augroup END
+" }}}
 " Nginx ----------------------------------------- {{{
 function! NginxFt()
         autocmd BufRead *.conf set filetype=nginx
