@@ -102,7 +102,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " }}}
 " Global Keymappings --------------------------- {{{
 "Leader key under '\' is totally inconvenient, remapping to ','
-let mapleader = ","
+let mapleader = "\<Space>"
 " Quick edit vimrc:
 nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 " Quick source vimrc:
