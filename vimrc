@@ -357,6 +357,7 @@ let g:airline_detect_whitespace=0
 let g:airline_mode_map = {'R': 'R', 'c': 'CMD   ', 'V': 'VL', 'v': 'V', 'i': 'I', '^V': 'VB', 'n': 'N'}
 " }}}
 " Viki ----------------------------------------- {{{
+let g:vikitasks#intervikis = 2
 let g:vikiNameSuffix = ".viki"
 let g:viki_intervikis = {}
 let g:viki_intervikis['V']  = [$HOME."/btsync/wiki", ".viki", "index.viki"]
