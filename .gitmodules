@@ -147,3 +147,9 @@
 	path = bundle/vim-yankring
 	url = https://github.com/vim-scripts/YankRing.vim.git
         ignore = untracked
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/viki_vim"]
+	path = bundle/viki_vim
+	url = https://github.com/tomtom/viki_vim.git
