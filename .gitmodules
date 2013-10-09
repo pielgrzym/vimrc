@@ -58,10 +58,6 @@
 	path = bundle/searchfold
 	url = https://github.com/vim-scripts/searchfold.vim.git
         ignore = untracked
-[submodule "bundle/vimwiki"]
-	path = bundle/vimwiki
-	url = https://github.com/vim-scripts/vimwiki.git
-        ignore = untracked
 [submodule "bundle/python_mode"]
 	path = bundle/python_mode
 	url = https://github.com/klen/python-mode.git
