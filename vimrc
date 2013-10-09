@@ -365,6 +365,10 @@ nnoremap <leader>v :V<cr>
 augroup ft_viki
         " au BufNewFile,BufRead *.viki  setf viki
         autocmd BufRead,BufNewFile $HOME/btsync/wiki/* set filetype=viki
+        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <CR> :VikiJump<cr>
+        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <BS> :VikiGoBack<cr>
+        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <Tab> :VikiFindNext<cr>
+        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <S-Tab> :VikiFindPrev<cr>
 augroup END
 " }}}
 "
