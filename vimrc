@@ -104,6 +104,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 " Global Keymappings --------------------------- {{{
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = "\<Space>"
+let maplocalleader = ","
 " Quick edit vimrc:
 nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 " Quick source vimrc:
@@ -354,5 +355,15 @@ let g:airline_theme='solarized'
 let g:airline_detect_whitespace=0
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_mode_map = {'R': 'R', 'c': 'CMD   ', 'V': 'VL', 'v': 'V', 'i': 'I', '^V': 'VB', 'n': 'N'}
+" }}}
+" Viki ----------------------------------------- {{{
+let g:vikiNameSuffix = ".viki"
+let g:viki_intervikis = {}
+let g:viki_intervikis['V']  = [$HOME."/btsync/wiki", ".viki", "index.viki"]
+nnoremap <leader>v :V<cr>
+augroup ft_viki
+        " au BufNewFile,BufRead *.viki  setf viki
+        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* set filetype=viki
+augroup END
 " }}}
 "
