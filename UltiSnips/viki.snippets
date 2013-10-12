@@ -1,0 +1,23 @@
+snippet tn "Add 'next' task" !b
+    #A ${1:description}
+endsnippet
+
+snippet tw "Add 'waiting' task" !b
+    #C ${1:waiting task desc}
+endsnippet
+
+snippet pr "Project template" !b
+* ${1:project name...}
+
+NEXT:
+    ${3:#A ${2:next action}}
+
+Notes:
+$4
+endsnippet
+
+snippet todo "Todo list" !b
+${1:TODO}:
+
+    + ${2:first thing...}
+endsnippet
