@@ -105,6 +105,7 @@ autocmd FileType c set omnifunc=ccomplete#Complete
 "Leader key under '\' is totally inconvenient, remapping to ','
 let mapleader = "\<Space>"
 let maplocalleader = ","
+inoremap jk <esc>
 " Quick edit vimrc:
 nnoremap <leader>ev :tabnew $MYVIMRC<cr>
 " Quick source vimrc:
