@@ -159,3 +159,6 @@
 [submodule "bundle/viki_tasks"]
 	path = bundle/viki_tasks
 	url = https://github.com/tomtom/vikitasks_vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
