@@ -136,7 +136,7 @@ nnoremap <silent> <Leader>e :CtrlPQuickfix<CR>
 " jump between changes in buffer:
 nnoremap <silent> <Leader>c :CtrlPChange<CR>
 nnoremap <silent> <Leader>o :CtrlP<CR>
-nnoremap <silent> <Leader>d :CtrlPTag<CR>
+" nnoremap <silent> <Leader>d :CtrlPTag<CR>
 nnoremap <silent> <Leader>t :CtrlPBufTag<CR>
 nnoremap <silent> <Leader>T :CtrlPBufTagAll<CR>
 nnoremap <silent> <Leader>` :CtrlPSessions<CR>
@@ -170,9 +170,6 @@ augroup ft_otl
         autocmd FileType otl set shiftwidth=4
 augroup END
 " }}}
-" Vim-pad -------------------------------------- {{{
-let g:pad_dir="~/Dropbox/notes"
-" }}}
 " Ultisnips ------------------------------------ {{{
 " let g:UltiSnipsExpandTrigger="<C-l>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -181,7 +178,7 @@ let g:pad_dir="~/Dropbox/notes"
 " Rope ----------------------------------------- {{{
 " let ropevim_goto_def_newwin=1
 " map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+map <localleader>r :RopeRename<CR>
 " }}}
 " Bash/zsh/etc --------------------------------- {{{
 augroup ft_bash
@@ -280,7 +277,7 @@ augroup ft_python
 augroup END
 " }}}
 " Python mode ---------------------------------- {{{
-let g:pymode_run_key = '<leader>R'
+let g:pymode_run_key = '<localleader>R'
 let g:pymode_rope_goto_def_newwin = 'new'
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_config = '/home/pielgrzym/.vim/pylint.ini'
@@ -372,5 +369,8 @@ augroup ft_viki
         autocmd FileType viki set ai sw=4 sts=4 et
 augroup END
 let g:vikitasks#intervikis = 2
+" }}}
+" NERDTree ----------------------------------------- {{{
+nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
 "

@@ -112,9 +112,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-pad"]
-	path = bundle/vim-pad
-	url = https://github.com/fmoralesc/vim-pad.git
 [submodule "bundle/ctrlp_sessions"]
 	path = bundle/ctrlp_sessions
 	url = https://github.com/pielgrzym/ctrlp-sessions.git
