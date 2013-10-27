@@ -165,3 +165,6 @@
 [submodule "bundle/tvo"]
 	path = bundle/tvo
 	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
+[submodule "bundle/voom"]
+	path = bundle/voom
+	url = https://github.com/vim-scripts/VOoM.git
