@@ -162,3 +162,6 @@
 [submodule "bundle/handlebars"]
 	path = bundle/handlebars
 	url = https://github.com/nono/vim-handlebars.git
+[submodule "bundle/tvo"]
+	path = bundle/tvo
+	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
