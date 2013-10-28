@@ -370,6 +370,9 @@ augroup ft_viki
 augroup END
 let g:vikitasks#intervikis = 2
 " }}}
+" olt ------------------------------------------ {{{
+let g:otl_bold_headers = 1
+" }}}
 " NERDTree ----------------------------------------- {{{
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 " }}}
