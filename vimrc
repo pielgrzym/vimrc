@@ -38,6 +38,7 @@ set history=2000 "Sets how many lines of history VIM has to remember
 set ssop=blank,buffers,curdir,folds,localoptions,tabpages,winpos,winsize "Session options
 set viminfo='500,<1000,s100,f1,n~/.viminfo "Remember marks, registers (up to 100kb)
 set ignorecase " case insensitive search
+set incsearch " incremental search FTW
 set smartcase " make searches case-insensitive, unless they contain upper-case letters:
 set scrolljump=7
 set pastetoggle=<F12>
