@@ -43,6 +43,7 @@ set smartcase " make searches case-insensitive, unless they contain upper-case l
 set scrolljump=7
 set pastetoggle=<F12>
 set modelines=1
+set cursorline " cool cursor
 set backspace=indent,eol,start " backspacing over all sorts of stuff
 filetype plugin on "Enable filetype plugin
 filetype indent on "Enable indenting plugin
