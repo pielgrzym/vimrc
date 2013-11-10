@@ -163,12 +163,22 @@ inoremap <expr><C-x> neocomplcache#smart_close_popup()."\<C-x>"
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 " }}}
 " Vimoutliner ---------------------------------- {{{
-let otl_map_tabs = 1
+"let otl_map_tabs = 1
+let g:otl_bold_headers = 0
 augroup ft_otl
         autocmd!
         autocmd FileType otl set noexpandtab
         autocmd FileType otl set tabstop=4
         autocmd FileType otl set shiftwidth=4
+        function! Jump2inbox(ctx)
+                :normal 1gt
+                :normal gg
+                :call search(a:ctx)
+                execute "normal! o\<tab>"
+                startinsert!
+        endfunction
+        noremap <localleader>ip :call Jump2inbox("PRIV")<CR>
+        noremap <localleader>ib :call Jump2inbox("BASE")<CR>
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
@@ -370,9 +380,6 @@ augroup ft_viki
         autocmd FileType viki set ai sw=4 sts=4 et
 augroup END
 let g:vikitasks#intervikis = 2
-" }}}
-" olt ------------------------------------------ {{{
-let g:otl_bold_headers = 0
 " }}}
 " NERDTree ----------------------------------------- {{{
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
