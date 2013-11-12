@@ -116,6 +116,7 @@ nnoremap <silent> <C-k> :tabp<CR>
 nnoremap <silent> <C-j> :tabn<CR>
 nnoremap <silent> <Leader>x :MkS<CR>
 nnoremap <silent> <Leader>X :MkS <CR> :qal<CR>
+nnoremap <leader><leader> :e #<cr>
 " cmap in case we've forgotten to sudo vim before editing file ;)
 cmap `w w !sudo tee >/dev/null %
 " git reset file changes
