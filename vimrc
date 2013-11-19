@@ -301,10 +301,10 @@ let g:pymode_syntax = 1
 nnoremap <F4> :PyLintWindowToggle<CR>
 " }}}
 " Gist ----------------------------------------- {{{
-let g:gist_clip_command = 'xclip -selection clipboard'
+let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
-let g:gist_browser_command = 'firefox %URL%'
+let g:gist_browser_command = 'open %URL%'
 " }}}
 " Templates ------------------------------------ {{{
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
