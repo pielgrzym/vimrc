@@ -189,3 +189,6 @@
 [submodule "bundle/ag-vim"]
 	path = bundle/ag-vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = https://github.com/edkolev/tmuxline.vim.git
