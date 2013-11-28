@@ -182,6 +182,8 @@ augroup ft_otl
         endfunction
         noremap <localleader>ip :call Jump2inbox("PRIV")<CR>
         noremap <localleader>ib :call Jump2inbox("BASE")<CR>
+        noremap <localleader>, :call Jump2inbox("BASE")<CR>
+        noremap <localleader>. :call Jump2inbox("PRIV")<CR>
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
