@@ -165,7 +165,7 @@ let g:neocomplcache_enable_underbar_completion = 1 " c_p -> compeltion -> curren
 inoremap <expr><C-x> neocomplcache#smart_close_popup()."\<C-x>"
 inoremap <expr><CR>  neocomplcache#smart_close_popup() . "\<CR>"
 " }}}
-" Vimoutliner ---------------------------------- {{{
+" OTL ---------------------------------- {{{
 "let otl_map_tabs = 1
 let g:otl_bold_headers = 0
 augroup ft_otl
@@ -180,6 +180,12 @@ augroup ft_otl
                 execute "normal! o\<tab>"
                 startinsert!
         endfunction
+        function! AutoCommit()
+                let commit_msg = expand('%:t')
+                silent! execute "!git commit -a -m \"".commit_msg."\""
+                redraw!
+        endfunction
+        autocmd BufWritePost *.otl :call AutoCommit()
         noremap <localleader>ip :call Jump2inbox("PRIV")<CR>
         noremap <localleader>ib :call Jump2inbox("BASE")<CR>
         noremap <localleader>, :call Jump2inbox("BASE")<CR>
