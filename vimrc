@@ -324,9 +324,16 @@ augroup ft_xml
         autocmd FileType xml  let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '`': '`', '«': '»'}
 augroup END
 " }}}
+" Handlebars ----------------------------------- {{{
+augroup ft_handlebars
+        autocmd!
+        autocmd FileType handlebars set ai sw=2 sts=2 et
+augroup END
+" }}}
 " Html ----------------------------------------- {{{
 augroup ft_html
         autocmd!
+        autocmd FileType xhtml,html,html4 set ai sw=2 sts=2 et
         autocmd FileType htmldjango set commentstring={#\ %s\ #}
 augroup END
 " }}}
