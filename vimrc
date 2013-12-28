@@ -190,6 +190,7 @@ augroup ft_otl
         noremap <localleader>ib :call Jump2inbox("BASE")<CR>
         noremap <localleader>, :call Jump2inbox("BASE")<CR>
         noremap <localleader>. :call Jump2inbox("PRIV")<CR>
+        noremap <LocalLeader>v :call TrelloInbox()<CR>
 augroup END
 " }}}
 " Ultisnips ------------------------------------ {{{
@@ -375,6 +376,33 @@ augroup filetype_vim
     au!
     au FileType vim setlocal foldmethod=marker
 augroup END
+" }}}
+" Trello  -------------------------------------- {{{
+function! TrelloLoadInbox()
+  normal ggdG
+  read !$HOME/.vim/bin/trello inbox_list
+  normal ggdd
+endfunction
+
+function! TrelloPurgeInbox()
+  if confirm('Really purge Trello inbox?', "&y\n&n", 1)==1
+    normal ggdd
+    normal VG"ad
+    !$HOME/.vim/bin/trello inbox_purge
+    bd
+endif
+endfunction
+
+function! TrelloInbox()
+  vnew
+  set buftype=nofile
+  set bufhidden=hide
+  setlocal noswapfile
+  call TrelloLoadInbox()
+  nnoremap <buffer> q :bd<CR>
+  nnoremap <buffer> R :call TrelloLoadInbox()<CR>
+  command -buffer Purge call TrelloPurgeInbox()
+endfunction
 " }}}
 " Airline -------------------------------------- {{{
 let g:airline_powerline_fonts = 1
