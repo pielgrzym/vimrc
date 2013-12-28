@@ -58,3 +58,8 @@ snippet git "Git task" !b
          dest=${3:repo_dir}
          ${5:version=${4:ref}}
 endsnippet
+
+snippet symlink "Create a symlink" !b
+- name: ${1:task name}
+  file: state=link src=${2:/vagrant} dest=${3:/tmp}
+endsnippet
