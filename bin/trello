@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+require 'yaml'
+require 'trello'
+require 'thor'
+
+class TrelloCLI < Thor
+  desc "List inbox", "Show card names from inbox on Trello"
+  def inbox_list
+    init_trello
+    inbox_board = Trello::Board.find config['inbox_id']
+    inbox_board.lists.first.cards.each do |card|
+      puts "\t#{card.name}"
+    end
+  end
+
+  desc "Empty inbox", "Delete all cards in the inbox list"
+  def inbox_purge
+    init_trello
+    inbox_board = Trello::Board.find config['inbox_id']
+    inbox_board.lists.first.cards.each do |card|
+      card.delete
+    end
+  end
+
+  private
+
+  def config
+    YAML.load_file(File.expand_path('~/.trello.yml'))
+  end
+
+  def init_trello
+    Trello.configure do |c|
+      c.developer_public_key = config['key']
+      c.member_token = config['token']
+    end
+  end
+end
+
+TrelloCLI.start(ARGV)

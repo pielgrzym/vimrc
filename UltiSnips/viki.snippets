@@ -1,0 +1,42 @@
+snippet tn "Add 'next' task" !b
+    #A ${1:description}
+endsnippet
+
+snippet tw "Add 'waiting' task" !b
+    #C ${1:waiting task desc}
+endsnippet
+
+snippet pr "Project template" !b
+* ${1:project name...}
+
+NEXT:
+    ${3:#A ${2:next action}}
+
+Notes:
+$4
+endsnippet
+
+snippet todo "Todo list" !b
+${1:TODO}:
+
+    + ${2:first thing...}
+endsnippet
+
+snippet plan "Natural planning template" !b
+* Goal and principles *
+
+    + ${1:some goal or principle...}
+
+* Outcome (vision) *
+
+    + ${2:some outcome element...}
+
+* Brainstorm (ideas) *
+
+    + ${3:some idea...}
+
+* Organized plan *
+    $4
+* Next actions? *
+    $5
+endsnippet

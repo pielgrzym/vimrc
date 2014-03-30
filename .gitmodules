@@ -58,10 +58,6 @@
 	path = bundle/searchfold
 	url = https://github.com/vim-scripts/searchfold.vim.git
         ignore = untracked
-[submodule "bundle/vimwiki"]
-	path = bundle/vimwiki
-	url = https://github.com/vim-scripts/vimwiki.git
-        ignore = untracked
 [submodule "bundle/python_mode"]
 	path = bundle/python_mode
 	url = https://github.com/klen/python-mode.git
@@ -98,10 +94,6 @@
 	path = bundle/webapi-vim
 	url = https://github.com/mattn/webapi-vim.git
         ignore = untracked
-[submodule "bundle/nrrrgn"]
-	path = bundle/nrrrgn
-	url = https://github.com/chrisbra/NrrwRgn.git
-        ignore = untracked
 [submodule "bundle/gitolite"]
 	path = bundle/gitolite
 	url = https://github.com/tmatilai/gitolite.vim.git
@@ -114,37 +106,98 @@
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
         ignore = untracked
-[submodule "bundle/min-yank-ring"]
-	path = bundle/min-yank-ring
-	url = https://github.com/the-isz/MinYankRing.vim.git
-        ignore = untracked
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+        ignore = untracked
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
-[submodule "bundle/vim-pad"]
-	path = bundle/vim-pad
-	url = https://github.com/fmoralesc/vim-pad.git
+        ignore = untracked
 [submodule "bundle/ctrlp_sessions"]
 	path = bundle/ctrlp_sessions
 	url = https://github.com/pielgrzym/ctrlp-sessions.git
+        ignore = untracked
 [submodule "bundle/todotxt"]
 	path = bundle/todotxt
 	url = https://github.com/boushley/todo.txt-vim.git
+        ignore = untracked
 [submodule "bundle/ctrlp_ft"]
 	path = bundle/ctrlp_ft
 	url = https://github.com/endel/ctrlp-filetype.vim.git
+        ignore = untracked
 [submodule "bundle/nginx_syntax"]
 	path = bundle/nginx_syntax
 	url = https://github.com/evanmiller/nginx-vim-syntax.git
+        ignore = untracked
 [submodule "bundle/puppet-syntax"]
 	path = bundle/puppet-syntax
 	url = https://github.com/puppetlabs/puppet-syntax-vim.git
+        ignore = untracked
 [submodule "bundle/bro"]
 	path = bundle/bro
 	url = git://github.com/mephux/bro.vim.git
+        ignore = untracked
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git@github.com:bling/vim-airline
+        ignore = untracked
+[submodule "bundle/git-grep-vim"]
+	path = bundle/git-grep-vim
+	url = https://github.com/tjennings/git-grep-vim.git
+        ignore = untracked
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+        ignore = untracked
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = https://github.com/vim-scripts/YankRing.vim.git
+        ignore = untracked
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
+        ignore = untracked
+[submodule "bundle/viki_vim"]
+	path = bundle/viki_vim
+	url = https://github.com/tomtom/viki_vim.git
+        ignore = untracked
+[submodule "bundle/trag_vim"]
+	path = bundle/trag_vim
+	url = https://github.com/tomtom/trag_vim.git
+        ignore = untracked
+[submodule "bundle/viki_tasks"]
+	path = bundle/viki_tasks
+	url = https://github.com/tomtom/vikitasks_vim.git
+        ignore = untracked
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+        ignore = untracked
+[submodule "bundle/handlebars"]
+	path = bundle/handlebars
+	url = https://github.com/nono/vim-handlebars.git
+        ignore = untracked
+[submodule "bundle/tvo"]
+	path = bundle/tvo
+	url = https://github.com/vim-scripts/TVO--The-Vim-Outliner.git
+        ignore = untracked
+[submodule "bundle/voom"]
+	path = bundle/voom
+	url = https://github.com/vim-scripts/VOoM.git
+        ignore = untracked
+[submodule "bundle/ag-vim"]
+	path = bundle/ag-vim
+	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/tmuxline"]
+	path = bundle/tmuxline
+	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/vim-mustache-handlebars"]
+	path = bundle/vim-mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule "bundle/ansible-yaml"]
+	path = bundle/ansible-yaml
+	url = https://github.com/chase/vim-ansible-yaml
