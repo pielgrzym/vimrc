@@ -310,10 +310,19 @@ let g:pymode_syntax = 1
 nnoremap <F4> :PyLintWindowToggle<CR>
 " }}}
 " Gist ----------------------------------------- {{{
-let g:gist_clip_command = 'pbcopy'
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
-let g:gist_browser_command = 'open %URL%'
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin"
+    " Mac stuff here
+    let g:gist_browser_command = 'open %URL%'
+    let g:gist_clip_command = 'pbcopy'
+  else
+    let g:gist_browser_command = 'chromium %URL%'
+    let g:gist_clip_command = 'xclip -selection clipboard'
+  endif
+endif
 " }}}
 " Templates ------------------------------------ {{{
 autocmd BufNewFile * silent! 0r ~/.vim/templates/%:e.tpl
