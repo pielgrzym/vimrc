@@ -32,7 +32,7 @@
         ignore = untracked
 [submodule "bundle/gitv"]
 	path = bundle/gitv
-	url = git://github.com/gregsexton/gitv.git
+	url = https://github.com/gregsexton/gitv.git
         ignore = untracked
 [submodule "bundle/emmet"]
 	path = bundle/emmet
@@ -136,11 +136,11 @@
         ignore = untracked
 [submodule "bundle/bro"]
 	path = bundle/bro
-	url = git://github.com/mephux/bro.vim.git
+	url = https://github.com/mephux/bro.vim.git
         ignore = untracked
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
-	url = git@github.com:bling/vim-airline
+	url = https://github.com/bling/vim-airline.git
         ignore = untracked
 [submodule "bundle/git-grep-vim"]
 	path = bundle/git-grep-vim
@@ -156,7 +156,7 @@
         ignore = untracked
 [submodule "bundle/tlib"]
 	path = bundle/tlib
-	url = git://github.com/tomtom/tlib_vim.git
+	url = https://github.com/tomtom/tlib_vim.git
         ignore = untracked
 [submodule "bundle/viki_vim"]
 	path = bundle/viki_vim
@@ -194,7 +194,7 @@
 	url = https://github.com/edkolev/tmuxline.vim.git
 [submodule "bundle/vim-unimpaired"]
 	path = bundle/vim-unimpaired
-	url = git://github.com/tpope/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git
 [submodule "bundle/vim-mustache-handlebars"]
 	path = bundle/vim-mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
