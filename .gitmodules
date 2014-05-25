@@ -201,3 +201,9 @@
 [submodule "bundle/ansible-yaml"]
 	path = bundle/ansible-yaml
 	url = https://github.com/chase/vim-ansible-yaml
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "bundle/syntax_range"]
+	path = bundle/syntax_range
+	url = https://github.com/vim-scripts/SyntaxRange.git
