@@ -225,21 +225,6 @@ augroup ft_ruby
         autocmd FileType ruby,eruby,yaml nmap <buffer> <leader>rci :%!ruby-code-indenter<cr>
 augroup END
 " }}}
-" Django docs ---------------------------------- {{{
-" Search tags generated for django .rst docs source files
-" to find documentation with CtrlP and open it in given window
-function! SearchDjangoDocs()
-        let g:django_docs_path = "/home/pielgrzym/work/django_docs/docs/"
-        let g:oldtags = &tags
-        let g:oldpwd = getcwd()
-        :cd `=g:django_docs_path`
-        let &tags = g:django_docs_path."tags"
-        :CtrlPTag
-        let &tags = g:oldtags
-endfunction
-autocmd BufRead */django_docs/django/docs/* set filetype=rst
-noremap <leader>? :call SearchDjangoDocs()<CR>
-" }}}
 " Vagrant --------------------------------------- {{{
 augroup ft_vagrant
         autocmd!
@@ -389,55 +374,12 @@ augroup filetype_vim
     au FileType vim setlocal foldmethod=marker
 augroup END
 " }}}
-" Trello  -------------------------------------- {{{
-function! TrelloLoadInbox()
-  normal ggdG
-  read !$HOME/.vim/bin/trello inbox_list
-  normal ggdd
-endfunction
-
-function! TrelloPurgeInbox()
-  if confirm('Really purge Trello inbox?', "&y\n&n", 1)==1
-    normal ggdd
-    normal VG"ad
-    !$HOME/.vim/bin/trello inbox_purge
-    bd
-endif
-endfunction
-
-function! TrelloInbox()
-  vnew
-  set buftype=nofile
-  set bufhidden=hide
-  setlocal noswapfile
-  call TrelloLoadInbox()
-  nnoremap <buffer> q :bd<CR>
-  nnoremap <buffer> R :call TrelloLoadInbox()<CR>
-  command -buffer Purge call TrelloPurgeInbox()
-endfunction
-" }}}
 " Airline -------------------------------------- {{{
 let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_detect_whitespace=0
 " let g:airline#extensions#tabline#enabled = 1
 let g:airline_mode_map = {'R': 'R', 'c': 'CMD   ', 'V': 'VL', 'v': 'V', 'i': 'I', '^V': 'VB', 'n': 'N'}
-" }}}
-" Viki ----------------------------------------- {{{
-let g:vikiNameSuffix = ".viki"
-let g:viki_intervikis = {}
-let g:viki_intervikis['V']  = [$HOME."/btsync/wiki", ".viki", "index.viki"]
-nnoremap <leader>v :V<cr>
-augroup ft_viki
-        " au BufNewFile,BufRead *.viki  setf viki
-        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* set filetype=viki
-        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <CR> :VikiJump<cr>
-        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <BS> :VikiGoBack<cr>
-        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <Tab> :VikiFindNext<cr>
-        autocmd BufRead,BufNewFile $HOME/btsync/wiki/* nnoremap <silent> <S-Tab> :VikiFindPrev<cr>
-        autocmd FileType viki set ai sw=4 sts=4 et
-augroup END
-let g:vikitasks#intervikis = 2
 " }}}
 " NERDTree ----------------------------------------- {{{
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
