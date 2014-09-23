@@ -154,17 +154,9 @@
 	path = bundle/tlib
 	url = https://github.com/tomtom/tlib_vim.git
         ignore = untracked
-[submodule "bundle/viki_vim"]
-	path = bundle/viki_vim
-	url = https://github.com/tomtom/viki_vim.git
-        ignore = untracked
 [submodule "bundle/trag_vim"]
 	path = bundle/trag_vim
 	url = https://github.com/tomtom/trag_vim.git
-        ignore = untracked
-[submodule "bundle/viki_tasks"]
-	path = bundle/viki_tasks
-	url = https://github.com/tomtom/vikitasks_vim.git
         ignore = untracked
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
